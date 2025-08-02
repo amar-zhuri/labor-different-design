@@ -1,0 +1,105 @@
+import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+
+const Contact = () => {
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Adresa",
+      details: ["Gjeravica 30", "Prizren 20000", "Republika e Kosovës"]
+    },
+    {
+      icon: Phone,
+      title: "Telefoni",
+      details: ["+383 XX XXX XXX", "Për informata dhe pyetje"]
+    },
+    {
+      icon: Clock,
+      title: "Orari i Punës",
+      details: ["Hënë - Enjte: 07:00 - 16:00", "Shtunë: 07:00 - 13:00", "E Diel: E mbyllur"]
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      details: ["info@laboratorilabor.com", "Për komunikim elektronik"]
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 bg-gradient-to-b from-accent to-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            Kontaktoni <span className="text-primary">Me Ne</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Jemi këtu për t'ju ndihmuar me të gjitha pyetjet tuaja rreth shërbimeve tona mjekësore. 
+            Kontaktoni me ne për informata shtesë ose për të rezervuar një vizitë.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {contactInfo.map((info, index) => (
+            <Card key={index} className="border-0 shadow-soft hover:shadow-medical transition-all duration-300">
+              <CardHeader className="text-center pb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <info.icon className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-xl text-foreground">{info.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                {info.details.map((detail, idx) => (
+                  <p key={idx} className="text-muted-foreground mb-1">{detail}</p>
+                ))}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-medical p-8 md:p-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                Na Vizitoni në Laboratorin Tonë
+              </h3>
+              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                Laboratori Labor ndodhet në qendër të Prizrenit, në një lokacion të lehtë për t'u arritur. 
+                Ofrojmë një ambient të rehatshëm dhe profesional për të gjithë pacientët tanë.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground">Gjeravica 30, Prizren 20000</p>
+                    <p className="text-sm text-muted-foreground">Parkingje i disponueshëm pranë laboratorit</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold text-foreground">Orari i Punës</p>
+                    <p className="text-sm text-muted-foreground">Hëra-Enjte: 07:00-16:00 | Shtunë: 07:00-13:00</p>
+                  </div>
+                </div>
+              </div>
+              <Button className="mt-8" size="lg">
+                <Phone className="mr-2 h-5 w-5" />
+                Telefononi Tani
+              </Button>
+            </div>
+            <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center">
+              <div className="text-center text-gray-500">
+                <MapPin className="h-12 w-12 mx-auto mb-4" />
+                <p className="text-lg font-medium">Harta e Lokacionit</p>
+                <p className="text-sm">Gjeravica 30, Prizren 20000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
