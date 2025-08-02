@@ -8,8 +8,8 @@ const SpecializedTests = () => {
       icon: Bug,
       title: "Teste për Sëmundje Infektive",
       description: "Diagnostikim i saktë për HIV, Hepatit A/B/C, dhe sëmundje të tjera infektive",
-  
-      urgent: false
+      features: ["HIV 1/2", "Hepatit A/B/C", "Sifilis", "TORCH Panel"],
+      urgent: true
     },
     {
       icon: AlertTriangle,
