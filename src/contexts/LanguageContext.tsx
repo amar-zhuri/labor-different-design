@@ -152,7 +152,12 @@ const translations = {
     'footer.description': 'Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, Laboratori Labor është partneri juaj i besueshëm për shëndetin dhe mirëqenien tuaj në Prizren.',
     'footer.license': 'Licencuar nga Ministria e Shëndetësisë së Kosovës',
     'footer.copyright': '© 2024 Laboratori Labor. Të gjitha të drejtat e rezervuara.',
-    'footer.design': 'Dizajni i faqes nga Lovable.'
+    'footer.design': 'Dizajni i faqes nga Lovable.',
+    'footer.contact': 'Informata Kontakti',
+    'footer.hours': 'Orari i Punës',
+    'footer.follow': 'Na ndiqni',
+    'footer.country': 'Republika e Kosovës',
+    'footer.designed': 'Dizajnuar dhe zhvilluar me kujdes për pacientët tanë'
   },
   
   bs: {
@@ -287,7 +292,12 @@ const translations = {
     'footer.description': 'Sa preko 25 godina iskustva u oblasti medicinskih analiza, Laboratorija Labor je vaš pouzdan partner za zdravlje i blagostanje u Prizrenu.',
     'footer.license': 'Licenciran od strane Ministarstva zdravlja Kosova',
     'footer.copyright': '© 2024 Laboratorija Labor. Sva prava zadržana.',
-    'footer.design': 'Dizajn stranice od Lovable.'
+    'footer.design': 'Dizajn stranice od Lovable.',
+    'footer.contact': 'Informacije o kontaktu',
+    'footer.hours': 'Radno vreme',
+    'footer.follow': 'Pratite nas',
+    'footer.country': 'Republika Kosovo',
+    'footer.designed': 'Dizajnirano i razvijeno s pažnjom za naše pacijente'
   },
   
   en: {
@@ -422,7 +432,12 @@ const translations = {
     'footer.description': 'With over 25 years of experience in medical analysis, Laboratory Labor is your trusted partner for health and wellness in Prizren.',
     'footer.license': 'Licensed by the Ministry of Health of Kosovo',
     'footer.copyright': '© 2024 Laboratory Labor. All rights reserved.',
-    'footer.design': 'Website design by Lovable.'
+    'footer.design': 'Website design by Lovable.',
+    'footer.contact': 'Contact Information',
+    'footer.hours': 'Working Hours',
+    'footer.follow': 'Follow us',
+    'footer.country': 'Republic of Kosovo',
+    'footer.designed': 'Designed and developed with care for our patients'
   },
   
   tr: {
@@ -557,7 +572,12 @@ const translations = {
     'footer.description': '25 yılı aşkın deneyimle tıbbi analiz alanında Laboratuvar Labor, sağlık ve refah konularında Prizren\'de güvenilir ortağınızdır.',
     'footer.license': 'Kosova Sağlık Bakanlığı Tarafından Lisanslanmıştır',
     'footer.copyright': '© 2024 Laboratuvar Labor. Tüm hakları saklıdır.',
-    'footer.design': 'Web sitesi tasarımı Lovable tarafından yapılmıştır.'
+    'footer.design': 'Web sitesi tasarımı Lovable tarafından yapılmıştır.',
+    'footer.contact': 'İletişim Bilgileri',
+    'footer.hours': 'Çalışma Saatleri',
+    'footer.follow': 'Bizi takip edin',
+    'footer.country': 'Kosova Cumhuriyeti',
+    'footer.designed': 'Hastalarımız için özenle tasarlanmış ve geliştirilmiştir'
   }
 };
 

@@ -25,14 +25,14 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="text-center md:text-left">
-            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Informata Kontakti</h3>
+            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">{t('footer.contact')}</h3>
             <div className="space-y-2 md:space-y-3">
               <div className="flex items-start gap-2 md:gap-3 justify-center md:justify-start">
                 <MapPin className="h-3 md:h-4 w-3 md:w-4 mt-1 flex-shrink-0" />
                 <div className="text-xs md:text-sm">
                   <p>Gjeravica 30</p>
                   <p>Prizren 20000</p>
-                  <p>Republika e Kosovës</p>
+                  <p>{t('footer.country')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start">
@@ -46,7 +46,7 @@ const Footer = () => {
             
             {/* Social Media */}
             <div className="mt-4 md:mt-6">
-              <h4 className="text-xs md:text-sm font-semibold mb-2 md:mb-3">Na ndiqni</h4>
+              <h4 className="text-xs md:text-sm font-semibold mb-2 md:mb-3">{t('footer.follow')}</h4>
               <div className="flex gap-2 md:gap-3 justify-center md:justify-start">
                 <a 
                   href="https://www.facebook.com/lablabor" 
@@ -72,27 +72,27 @@ const Footer = () => {
 
           {/* Working Hours */}
           <div className="text-center md:text-left">
-            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Orari i Punës</h3>
+            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">{t('footer.hours')}</h3>
             <div className="space-y-2 text-xs md:text-sm">
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start">
                 <Clock className="h-3 md:h-4 w-3 md:w-4 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">Hënë - Premte</p>
-                  <p className="text-primary-foreground/80">07:00 - 16:00</p>
+                  <p className="font-medium">{t('hours.weekdays').split(':')[0]}</p>
+                  <p className="text-primary-foreground/80">{t('hours.weekdays').split(': ')[1]}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start">
                 <Clock className="h-3 md:h-4 w-3 md:w-4 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">Shtunë</p>
-                  <p className="text-primary-foreground/80">07:00 - 13:00</p>
+                  <p className="font-medium">{t('hours.saturday').split(':')[0]}</p>
+                  <p className="text-primary-foreground/80">{t('hours.saturday').split(': ')[1]}</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 md:gap-3 justify-center md:justify-start">
                 <Clock className="h-3 md:h-4 w-3 md:w-4 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">E Diel</p>
-                  <p className="text-primary-foreground/80">E mbyllur</p>
+                  <p className="font-medium">{t('hours.sunday').split(':')[0]}</p>
+                  <p className="text-primary-foreground/80">{t('hours.sunday').split(': ')[1]}</p>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Footer = () => {
               {t('footer.copyright')}
             </div>
             <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-primary-foreground/80">
-              <span>Dizajnuar dhe zhvilluar me kujdes për pacientët tanë</span>
+              <span>{t('footer.designed')}</span>
             </div>
           </div>
         </div>
