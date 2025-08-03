@@ -81,13 +81,6 @@ const translations = {
     'service.detailed.title': 'Raporte të Detajuara',
     'service.detailed.desc': 'Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm',
     
-    // Technology Section
-    'tech.title': 'Teknologjia më e',
-    'tech.title.highlight': 'Avancuar',
-    
-    // Expert Team
-    'team.title': 'Ekipi më i', 
-    'team.title.highlight': 'Kualifikuar',
     // Contact
     'contact.title': 'Kontaktoni',
     'contact.title.highlight': 'Me Ne',

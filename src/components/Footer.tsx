@@ -1,9 +1,6 @@
 import { MapPin, Phone, Clock, Award, Facebook, Instagram } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage();
-  
   return (
     <footer className="bg-primary text-primary-foreground py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -16,11 +13,12 @@ const Footer = () => {
               className="h-12 md:h-16 w-auto mb-4 mx-auto md:mx-0"
             />
             <p className="text-primary-foreground/80 leading-relaxed mb-4 md:mb-6 text-sm md:text-base">
-              {t('footer.description')}
+              Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, Laboratori Labor 
+              është partneri juaj i besueshëm për shëndetin dhe mirëqenien tuaj në Prizren.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 text-xs md:text-sm">
               <Award className="h-3 md:h-4 w-3 md:w-4" />
-              <span className="text-center md:text-left">{t('footer.license')}</span>
+              <span className="text-center md:text-left">I Licensuar dhe i Certifikuar nga Autoritetet Shëndetësore</span>
             </div>
           </div>
 
@@ -103,7 +101,7 @@ const Footer = () => {
         <div className="border-t border-primary-light/20 mt-8 md:mt-12 pt-6 md:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div className="text-xs md:text-sm text-primary-foreground/80 mb-3 md:mb-0">
-              {t('footer.copyright')}
+              © 2024 Laboratori Labor. Të gjitha të drejtat e rezervuara.
             </div>
             <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-primary-foreground/80">
               <span>Dizajnuar dhe zhvilluar me kujdes për pacientët tanë</span>
