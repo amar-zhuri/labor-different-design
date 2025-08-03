@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: Clock,
       title: "Rezultate të Shpejta",
-      description: "Përpunim dhe dorëzim i shpejtë i rezultateve me saktësi të lartë dhe në kohë"
+      description: "Rezultate brenda disa orëve - përpunim dhe dorëzim i shpejtë me saktësi të lartë"
     }
   ];
 

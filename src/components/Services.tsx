@@ -54,8 +54,8 @@ const Services = () => {
             Shërbimet <span className="text-primary">Tona</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ofrojmë analizë të specializuara të gjakut dhe shërbime mjekësore me teknologjinë më të re 
-            dhe standardet më të larta të cilësisë
+            Ofrojmë analizë të specializuara të gjakut dhe shërbime mjekësore me teknologjinë më të re, 
+            standardet më të larta të cilësisë dhe rezultate brenda disa orëve
           </p>
         </div>
 
