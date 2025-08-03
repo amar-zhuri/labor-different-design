@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Award } from "lucide-react";
+import { MapPin, Phone, Clock, Award, Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -40,6 +40,31 @@ const Footer = () => {
                   <p>+383 44 217 859</p>
                   <p>+383 49 767 705</p>
                 </div>
+              </div>
+            </div>
+            
+            {/* Social Media */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold mb-3">Na ndiqni</h4>
+              <div className="flex gap-3">
+                <a 
+                  href="https://www.facebook.com/lablabor" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/laboratori_labor/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
