@@ -1,31 +1,34 @@
 import { GraduationCap, Users, Award, Stethoscope, Globe, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ExpertTeam = () => {
+  const { t } = useLanguage();
+  
   const teamHighlights = [
     {
       icon: Users,
-      title: "Mjekë dhe Teknikë me Eksperiencë",
-      description: "Ekip i kvalifikuar mjekësor dhe teknikësh me dekada eksperiencë",
-      detail: "Shumica e stafit ka mbi 15 vjet eksperiencë"
+      title: t('team.doctors'),
+      description: t('team.doctors.desc'),
+      detail: t('team.doctors.detail')
     },
     {
       icon: GraduationCap,
-      title: "Trajnime Ndërkombëtare",
-      description: "Pjesëmarrje e rregullt në trajnime dhe konferenca ndërkombëtare",
-      detail: "Përditësim i vazhdueshëm i njohurive"
+      title: t('team.international'),
+      description: t('team.international.desc'),
+      detail: t('team.international.detail')
     },
     {
       icon: Globe,
-      title: "Standarde Evropiane",
-      description: "Zbatimi i protokolleve dhe standardeve evropiane të laboratorisë",
-      detail: "Cilësi në nivel me vendet e BE-së"
+      title: t('team.standards'),
+      description: t('team.standards.desc'),
+      detail: t('team.standards.detail')
     },
     {
       icon: Stethoscope,
-      title: "Mbikëqyrje Mjekësore",
-      description: "Të gjitha rezultatet rishikohen nga mjekë të specializuar",
-      detail: "Kontroll i dyfishtë për saktësi maksimale"
+      title: t('team.supervision'),
+      description: t('team.supervision.desc'),
+      detail: t('team.supervision.detail')
     }
   ];
 
@@ -41,11 +44,10 @@ const ExpertTeam = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ekipi më i <span className="text-primary-light">Kualifikuar</span>
+            {t('team.title')}
           </h2>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Stafi ynë përbëhet nga mjekë dhe teknikë me kualifikime të larta dhe eksperiencë 
-            të gjatë në fushën e laboratorisë mjekësore
+            {t('team.subtitle')}
           </p>
         </div>
 
@@ -68,11 +70,10 @@ const ExpertTeam = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold mb-6">
-                Certifikime dhe Kualifikime
+                {t('team.certifications')}
               </h3>
               <p className="text-lg text-primary-foreground/90 mb-8 leading-relaxed">
-                Investojmë vazhdimisht në arsimimin dhe trajnimin e stafit tonë për të 
-                siguruar që të jemi në hap me zhvillimet më të reja në mjekësi laboratorike.
+                {t('team.certifications.desc')}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {certifications.map((cert, index) => (
@@ -86,19 +87,18 @@ const ExpertTeam = () => {
             <div className="text-center">
               <div className="bg-primary-light/20 rounded-xl p-8">
                 <Award className="h-16 w-16 text-primary-light mx-auto mb-4" />
-                <h4 className="text-2xl font-bold mb-4">Ekspertizë e Njohur</h4>
+                <h4 className="text-2xl font-bold mb-4">{t('team.expertise')}</h4>
                 <p className="text-primary-foreground/90 mb-6">
-                  Laboratori ynë është i njohur në të gjithë rajonin për cilësinë 
-                  e shërbimeve dhe ekspertizën e stafit.
+                  {t('team.expertise.desc')}
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
                     <div className="text-3xl font-bold text-primary-light">25+</div>
-                    <div className="text-sm text-primary-foreground/80">Vjet Eksperiencë</div>
+                    <div className="text-sm text-primary-foreground/80">{t('team.years')}</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-primary-light">100%</div>
-                    <div className="text-sm text-primary-foreground/80">Staf i Trajnuar</div>
+                    <div className="text-sm text-primary-foreground/80">{t('team.trained')}</div>
                   </div>
                 </div>
               </div>

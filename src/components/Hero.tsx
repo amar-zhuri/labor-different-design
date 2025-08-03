@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/laboratory-hero.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 
@@ -15,28 +18,28 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Laboratori <span className="text-primary-light">Labor</span>
+            {t('hero.title')}
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-            Analiza profesionale të gjakut dhe shërbime mjekësore me eksperiencë mbi 25 vjet në Prizren
+            {t('hero.description')}
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
             <div className="flex items-center gap-2 text-lg">
               <MapPin className="h-5 w-5" />
-              <span>Gjeravica 30, Prizren 20000</span>
+              <span>{t('hero.address')}</span>
             </div>
             <div className="flex items-center gap-2 text-lg">
               <Clock className="h-5 w-5" />
-              <span>Hën-Premte 07:00-16:00 | Sht 07:00-13:00</span>
+              <span>{t('hero.hours')}</span>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6 h-auto">
               <Phone className="mr-2 h-5 w-5" />
-              Kontaktoni Tash
+              {t('hero.contact')}
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-primary">
-              Shërbimet Tona
+              {t('hero.services')}
             </Button>
           </div>
         </div>

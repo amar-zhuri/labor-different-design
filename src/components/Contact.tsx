@@ -1,27 +1,30 @@
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Adresa",
-      details: ["Gjeravica 30", "Prizren 20000", "Republika e Kosovës"]
+      title: t('contact.address'),
+      details: [t('hero.address'), "Republika e Kosovës"]
     },
     {
       icon: Phone,
-      title: "Telefoni",
+      title: t('contact.phone'),
       details: ["+383 44 217 859", "+383 49 767 705", "Për informata dhe pyetje"]
     },
     {
       icon: Clock,
-      title: "Orari i Punës",
-      details: ["Hënë - Premte: 07:00 - 16:00", "Shtunë: 07:00 - 13:00", "E Diel: E mbyllur"]
+      title: t('contact.hours'),
+      details: [t('hours.weekdays'), t('hours.saturday'), t('hours.sunday')]
     },
     {
       icon: Mail,
-      title: "Email",
+      title: t('contact.email'),
       details: ["info@laboratorilabor.com", "Për komunikim elektronik"]
     }
   ];
@@ -31,11 +34,10 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Kontaktoni <span className="text-primary">Me Ne</span>
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Jemi këtu për t'ju ndihmuar me të gjitha pyetjet tuaja rreth shërbimeve tona mjekësore. 
-            Kontaktoni me ne për informata shtesë ose për të rezervuar një vizitë.
+            {t('contact.description')}
           </p>
         </div>
 
@@ -61,31 +63,30 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-foreground mb-6">
-                Na Vizitoni në Laboratorin Tonë
+                {t('contact.visit')}
               </h3>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Laboratori Labor ndodhet në qendër të Prizrenit, në një lokacion të lehtë për t'u arritur. 
-                Ofrojmë një ambient të rehatshëm dhe profesional për të gjithë pacientët tanë.
+                {t('contact.visit.desc')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">Gjeravica 30, Prizren 20000</p>
+                    <p className="font-semibold text-foreground">{t('hero.address')}</p>
                     <p className="text-sm text-muted-foreground">Parkingje i disponueshëm pranë laboratorit</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-foreground">Orari i Punës</p>
-                    <p className="text-sm text-muted-foreground">Hënë-Premte: 07:00-16:00 | Shtunë: 07:00-13:00</p>
+                    <p className="font-semibold text-foreground">{t('contact.hours')}</p>
+                    <p className="text-sm text-muted-foreground">{t('hero.hours')}</p>
                   </div>
                 </div>
               </div>
               <Button className="mt-8" size="lg">
                 <Phone className="mr-2 h-5 w-5" />
-                Telefononi Tani
+                {t('hero.contact')}
               </Button>
             </div>
             <div className="rounded-xl h-80 overflow-hidden">

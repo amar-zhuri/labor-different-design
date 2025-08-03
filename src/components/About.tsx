@@ -1,27 +1,30 @@
 import { Award, Users, Shield, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Award,
-      title: "25+ Vjet Eksperiencë",
-      description: "Një dekadë e gjysmë shërbimi të besueshëm dhe profesional në fushën e analizave mjekësore"
+      title: t('about.features.experience'),
+      description: t('about.features.experience.desc')
     },
     {
       icon: Shield,
-      title: "Siguri dhe Cilësi",
-      description: "Përdorimi i teknologjisë më të avancuar dhe standardeve ndërkombëtare të sigurisë"
+      title: t('about.features.security'),
+      description: t('about.features.security.desc')
     },
     {
       icon: Users,
-      title: "Staf i Kualifikuar",
-      description: "Ekip profesional i trajnuar me përvojë të gjatë në fushën e laboratorisë mjekësore"
+      title: t('about.features.staff'),
+      description: t('about.features.staff.desc')
     },
     {
       icon: Clock,
-      title: "Rezultate të Shpejta",
-      description: "Përpunim dhe dorëzim i shpejtë i rezultateve me saktësi të lartë dhe në kohë"
+      title: t('about.features.speed'),
+      description: t('about.features.speed.desc')
     }
   ];
 
@@ -30,12 +33,10 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Pse të Zgjidhni <span className="text-primary">Laboratorin Labor</span>?
+            {t('about.title.full')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, ne jemi partneri juaj i besueshëm 
-            për shëndetin dhe mirëqenien tuaj. Laboratori Labor ofron shërbime të specializuara me 
-            teknologjinë më të re dhe stafin më të kualifikuar në Prizren.
+            {t('about.description.full')}
           </p>
         </div>
         
@@ -56,7 +57,7 @@ const About = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full text-primary font-semibold">
             <Award className="h-5 w-5" />
-            <span>I Licensuar dhe i Certifikuar nga Autoritetet Shëndetësore të Kosovës</span>
+            <span>{t('about.license')}</span>
           </div>
         </div>
       </div>

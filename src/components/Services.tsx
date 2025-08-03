@@ -1,8 +1,11 @@
 import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import bloodTestingImage from "@/assets/blood-testing.jpg";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: Droplet,
@@ -51,11 +54,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Shërbimet <span className="text-primary">Tona</span>
+            {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ofrojmë analizë të specializuara të gjakut dhe shërbime mjekësore me teknologjinë më të re 
-            dhe standardet më të larta të cilësisë
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -69,21 +71,19 @@ const Services = () => {
           </div>
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-foreground">
-              Analizat më të Avancuara të Gjakut
+              {t('services.advanced.title')}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Me teknologjinë më moderne dhe stafin më të kualifikuar, ne sigurojmë rezultate të sakta 
-              dhe të shpejta për të gjitha analizat e gjakut. Çdo test kryhet sipas standardeve ndërkombëtare 
-              dhe me kujdesin më të madh për detajet.
+              {t('services.advanced.description')}
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Microscope className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Teknologji e Re</span>
+                <span className="text-sm font-medium">{t('services.new.technology')}</span>
               </div>
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <FileText className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Raporte të Detajuara</span>
+                <span className="text-sm font-medium">{t('services.detailed.reports')}</span>
               </div>
             </div>
           </div>
