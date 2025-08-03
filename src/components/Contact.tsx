@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail, MessageSquare } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, MessageSquare, Navigation } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -100,6 +100,15 @@ const Contact = () => {
                 >
                   <MessageSquare className="mr-2 h-4 md:h-5 w-4 md:w-5" />
                   WhatsApp
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600 w-full sm:w-auto"
+                  onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Gjeravica+30,+Prizren+20000,+Kosovo', '_blank')}
+                >
+                  <Navigation className="mr-2 h-4 md:h-5 w-4 md:w-5" />
+                  Udhëzimet
                 </Button>
               </div>
             </div>
