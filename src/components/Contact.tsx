@@ -105,7 +105,7 @@ const Contact = () => {
                   size="lg"
                   variant="outline"
                   className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600 w-full sm:w-auto"
-                  onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Gjeravica+30,+Prizren+20000,+Kosovo', '_blank')}
+                  onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Laboratori+Labor,+Gjeravica+30,+Prizren+20000,+Kosovo', '_blank')}
                 >
                   <Navigation className="mr-2 h-4 md:h-5 w-4 md:w-5" />
                   Udhëzimet
