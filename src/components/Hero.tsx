@@ -18,7 +18,7 @@ const Hero = () => {
             Laboratori <span className="text-primary-light">Labor</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
-            Analiza profesionale të gjakut dhe shërbime mjekësore me eksperiencë mbi 25 vjet në Prizren
+            Analiza profesionale të gjakut dhe shërbime mjekësore me mbi 25 vjet eksperiencë dhe 500,000+ teste të kryera me 99.6% saktësi në Prizren
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
             <div className="flex items-center gap-2 text-lg">

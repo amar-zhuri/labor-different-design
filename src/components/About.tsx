@@ -6,7 +6,7 @@ const About = () => {
     {
       icon: Award,
       title: "25+ Vjet Eksperiencë",
-      description: "Një dekadë e gjysmë shërbimi të besueshëm dhe profesional në fushën e analizave mjekësore"
+      description: "Dy dekadë shërbimi të besueshëm dhe profesional me mbi 500,000 teste të kryera me 99.6% saktësi"
     },
     {
       icon: Shield,
@@ -34,8 +34,8 @@ const About = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, ne jemi partneri juaj i besueshëm 
-            për shëndetin dhe mirëqenien tuaj. Laboratori Labor ofron shërbime të specializuara me 
-            teknologjinë më të re dhe stafin më të kualifikuar në Prizren.
+            për shëndetin dhe mirëqenien tuaj. Laboratori Labor ka kryer mbi 500,000 teste me 99.6% saktësi, 
+            duke ofruar shërbime të specializuara me teknologjinë më të re dhe stafin më të kualifikuar në Prizren.
           </p>
         </div>
         

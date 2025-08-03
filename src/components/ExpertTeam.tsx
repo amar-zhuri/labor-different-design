@@ -93,12 +93,12 @@ const ExpertTeam = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-primary-light">25+</div>
-                    <div className="text-sm text-primary-foreground/80">Vjet Eksperiencë</div>
+                    <div className="text-3xl font-bold text-primary-light">500K+</div>
+                    <div className="text-sm text-primary-foreground/80">Teste të Kryera</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-primary-light">100%</div>
-                    <div className="text-sm text-primary-foreground/80">Staf i Trajnuar</div>
+                    <div className="text-3xl font-bold text-primary-light">99.6%</div>
+                    <div className="text-sm text-primary-foreground/80">Saktësi në Rezultate</div>
                   </div>
                 </div>
               </div>
