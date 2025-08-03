@@ -13,8 +13,8 @@ const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
   const languages = [
-    { code: 'sq' as Language, name: 'Shqip', flag: '🇽🇰' },
-    { code: 'sr' as Language, name: 'Српски', flag: '🇷🇸' },
+    { code: 'sq' as Language, name: 'Shqip', flag: '🇦🇱' },
+    { code: 'bs' as Language, name: 'Bosanski', flag: '🇧🇦' },
     { code: 'en' as Language, name: 'English', flag: '🇺🇸' },
   ];
 

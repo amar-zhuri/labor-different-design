@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type Language = 'sq' | 'sr' | 'en'; // Albanian, Serbian, English
+export type Language = 'sq' | 'bs' | 'en'; // Albanian, Bosnian, English
 
 interface LanguageContextType {
   language: Language;
@@ -155,7 +155,7 @@ const translations = {
     'footer.design': 'Dizajni i faqes nga Lovable.'
   },
   
-  sr: {
+  bs: {
     // Navigation
     'nav.about': 'O nama',
     'nav.services': 'Usluge',
