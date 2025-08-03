@@ -27,7 +27,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/34c49b4a-27df-4c53-b230-575af90598b4.png" 
               alt="Laboratori Labor Logo"
-              className="h-12 w-auto"
+              className="h-8 md:h-12 w-auto"
             />
           </div>
 
@@ -81,7 +81,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/98 backdrop-blur-sm border-b border-border shadow-lg">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/98 backdrop-blur-sm border-b border-border shadow-lg z-40">
             <nav className="p-4 space-y-3">
               <button 
                 onClick={() => scrollToSection('about')}

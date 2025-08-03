@@ -14,36 +14,37 @@ const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             Laboratori <span className="text-primary-light">Labor</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-95 leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 opacity-95 leading-relaxed px-4 sm:px-0">
             Analiza profesionale të gjakut dhe shërbime mjekësore me mbi 25 vjet eksperiencë dhe 500,000+ teste të kryera me 99.6% saktësi në Prizren
           </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
-            <div className="flex items-center gap-2 text-lg">
-              <MapPin className="h-5 w-5" />
+          <div className="flex flex-col md:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4 sm:px-0">
+            <div className="flex items-center gap-2 text-sm md:text-lg">
+              <MapPin className="h-4 md:h-5 w-4 md:w-5" />
               <span>Gjeravica 30, Prizren 20000</span>
             </div>
-            <div className="flex items-center gap-2 text-lg">
-              <Clock className="h-5 w-5" />
-              <span>Hën-Premte 07:00-16:00 | Sht 07:00-13:00</span>
+            <div className="flex items-center gap-2 text-sm md:text-lg text-center">
+              <Clock className="h-4 md:h-5 w-4 md:w-5" />
+              <span className="hidden sm:inline">Hën-Premte 07:00-16:00 | Sht 07:00-13:00</span>
+              <span className="sm:hidden">07:00-16:00 (H-P) | 07:00-13:00 (Sht)</span>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
             <Button 
               size="lg" 
               variant="secondary" 
-              className="text-lg px-8 py-6 h-auto"
+              className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto w-full sm:w-auto"
               onClick={() => window.open('tel:+38344217859', '_self')}
             >
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
               Kontaktoni Tash
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-primary"
+              className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto border-white text-white hover:bg-white hover:text-primary w-full sm:w-auto"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Shërbimet Tona
