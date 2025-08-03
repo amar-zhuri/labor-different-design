@@ -9,9 +9,9 @@ export interface SEOConfig {
 }
 
 export const defaultSEOConfig: SEOConfig = {
-  title: "Laboratori Mjekësor - Analizat më të Sakta në Prizren",
-  description: "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta. Teknologji e avancuar, ekip ekspert, rezultate të besueshme.",
-  keywords: "laboratori mjekësor, Prizren, Kosovo, analizat, ekzaminimet mjekësore, hematologji, biokimi, mikrobiologji",
+  title: "Laboratori Mjekësor - Analizat më të Sakta në Prizren | Rezultate Online 24/7",
+  description: "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta. Rezultate elektronike 24/7, teknologji e avancuar, ekip ekspert.",
+  keywords: "laboratori mjekësor, Prizren, Kosovo, analizat, rezultate online 24/7, rezultate elektronike, ekzaminimet mjekësore, hematologji, biokimi, mikrobiologji",
   ogImage: "/og-image.jpg"
 };
 
@@ -74,7 +74,7 @@ export const generateLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "name": "Laboratori Mjekësor",
-  "description": "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta.",
+  "description": "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta me rezultate elektronike 24/7.",
   "url": window.location.origin,
   "telephone": "+383 44 123 456",
   "email": "info@laboratori-prizren.com",
@@ -109,18 +109,23 @@ export const generateLocalBusinessSchema = () => ({
   "availableService": [
     {
       "@type": "MedicalTest",
+      "name": "Rezultate Elektronike 24/7",
+      "description": "Qasje online në rezultatet e testeve në çdo kohë të ditës dhe natës"
+    },
+    {
+      "@type": "MedicalTest",
       "name": "Analizat e Gjakut",
-      "description": "Analiza të plota të gjakut me teknologji moderne"
+      "description": "Analiza të plota të gjakut me teknologji moderne dhe rezultate të shpejta"
     },
     {
       "@type": "MedicalTest", 
       "name": "Analizat Biokimike",
-      "description": "Testime biokimike për funksionin e organeve"
+      "description": "Testime biokimike për funksionin e organeve me raportim elektronik"
     },
     {
       "@type": "MedicalTest",
       "name": "Analizat Mikrobiologjike", 
-      "description": "Identifikimi i infeksioneve dhe baktereve"
+      "description": "Identifikimi i infeksioneve dhe baktereve me rezultate online"
     }
   ]
 });
