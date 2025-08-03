@@ -2,53 +2,56 @@ import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTri
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LazyImage from "@/components/ui/lazy-image";
 import bloodTestingImage from "@/assets/blood-testing.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       icon: Droplet,
-      title: "Analiza e Gjakut të Plotë",
-      description: "Analiza komplekse të gjakut që përfshijnë numërimin e qelizave, nivelet e hemoglobinës dhe parametra të tjerë të rëndësishëm"
+      title: t('service.blood.title'),
+      description: t('service.blood.desc')
     },
     {
       icon: Heart,
-      title: "Profili Kardiak",
-      description: "Teste specialë për vlerësimin e shëndetit të zemrës, kolesterolit dhe triglicerideve"
+      title: t('service.cardiac.title'),
+      description: t('service.cardiac.desc')
     },
     {
       icon: Activity,
-      title: "Teste Hormonale",
-      description: "Analiza të nivelit të hormoneve të ndryshme për diagnostikimin e çrregullimeve endokrine"
+      title: t('service.hormonal.title'),
+      description: t('service.hormonal.desc')
     },
     {
       icon: TestTube,
-      title: "Biokimia Klinike",
-      description: "Analiza të enzimave, proteinave dhe substancave kimike në gjak për vlerësimin e funksionit të organeve"
+      title: t('service.biochemistry.title'),
+      description: t('service.biochemistry.desc')
     },
     {
       icon: Bug,
-      title: "Teste për Sëmundje Infektive",
-      description: "Diagnostikim i saktë për HIV, Hepatit A/B/C, dhe sëmundje të tjera infektive"
+      title: t('service.infectious.title'),
+      description: t('service.infectious.desc')
     },
     {
       icon: AlertTriangle,
-      title: "Markerë Tumoralë",
-      description: "Teste të specializuara për zbulimin e hershëm të kancerit dhe monitorimin e trajtimit"
+      title: t('service.tumor.title'),
+      description: t('service.tumor.desc')
     },
     {
       icon: Activity,
-      title: "Panele Alergjike",
-      description: "Identifikimi i alergjive të ndryshme për një jetë më të shëndetshme"
+      title: t('service.allergy.title'),
+      description: t('service.allergy.desc')
     },
     {
       icon: FileText,
-      title: "Rezultate Elektronike 24/7",
-      description: "Merrni rezultatet tuaja online në çdo kohë të ditës dhe natës, nga çdo pajisje me qasje në internet"
+      title: t('service.electronic.title'),
+      description: t('service.electronic.desc')
     },
     {
       icon: FileText,
-      title: "Raporte të Detajuara",
-      description: "Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm"
+      title: t('service.detailed.title'),
+      description: t('service.detailed.desc')
     }
   ];
 
@@ -57,11 +60,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Shërbimet <span className="text-primary">Tona</span>
+            {t('services.title')} <span className="text-primary">{t('services.title.highlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ofrojmë analizë të specializuara të gjakut dhe shërbime mjekësore me teknologjinë më të re, 
-            standardet më të larta të cilësisë dhe rezultate brenda disa orëve
+            {t('services.description')}
           </p>
         </div>
 
@@ -75,30 +77,28 @@ const Services = () => {
           </div>
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-foreground">
-              Analizat më të Avancuara të Gjakut
+              {t('services.advanced.title')}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Me teknologjinë më moderne dhe stafin më të kualifikuar, ne sigurojmë rezultate të sakta 
-              dhe të shpejta për të gjitha analizat e gjakut. Çdo test kryhet sipas standardeve ndërkombëtare 
-              dhe me kujdesin më të madh për detajet.
+              {t('services.advanced.description')}
             </p>
             <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
               <div className="flex items-center gap-2 text-green-700 mb-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="font-semibold">Rezultate Online 24/7</span>
+                <span className="font-semibold">{t('services.online247')}</span>
               </div>
               <p className="text-green-600 text-sm">
-                Lexoni rezultatet tuaja në çdo kohë nga telefoni, tableti ose kompjuteri.
+                {t('services.online247.desc')}
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Microscope className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Teknologji e Re</span>
+                <span className="text-sm font-medium">{t('services.tech')}</span>
               </div>
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <FileText className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">Raporte të Detajuara</span>
+                <span className="text-sm font-medium">{t('services.reports')}</span>
               </div>
             </div>
           </div>
