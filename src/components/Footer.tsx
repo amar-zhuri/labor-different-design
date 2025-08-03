@@ -51,19 +51,19 @@ const Footer = () => {
                   href="https://www.facebook.com/lablabor" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  className="p-3 md:p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors touch-manipulation min-w-[44px] min-h-[44px] md:min-w-auto md:min-h-auto flex items-center justify-center"
                   aria-label="Facebook"
                 >
-                  <Facebook className="h-3 md:h-4 w-3 md:w-4" />
+                  <Facebook className="h-4 md:h-4 w-4 md:w-4" />
                 </a>
                 <a 
                   href="https://www.instagram.com/laboratori_labor/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
+                  className="p-3 md:p-2 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors touch-manipulation min-w-[44px] min-h-[44px] md:min-w-auto md:min-h-auto flex items-center justify-center"
                   aria-label="Instagram"
                 >
-                  <Instagram className="h-3 md:h-4 w-3 md:w-4" />
+                  <Instagram className="h-4 md:h-4 w-4 md:w-4" />
                 </a>
               </div>
             </div>
