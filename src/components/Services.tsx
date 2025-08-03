@@ -64,7 +64,7 @@ const Services = () => {
           <div>
             <LazyImage 
               src={bloodTestingImage} 
-              alt="Analiza të gjakut në Laboratorin Labor"
+              alt="Analizat e gjakut - pajisje moderne për testimin e gjakut në Laboratorin Labor në Prizren"
               className="rounded-2xl shadow-medical w-full"
             />
           </div>

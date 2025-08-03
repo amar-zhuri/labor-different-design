@@ -1,0 +1,141 @@
+// SEO utilities and helpers
+export interface SEOConfig {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: any;
+}
+
+export const defaultSEOConfig: SEOConfig = {
+  title: "Laboratori Mjekësor - Analizat më të Sakta në Prizren",
+  description: "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta. Teknologji e avancuar, ekip ekspert, rezultate të besueshme.",
+  keywords: "laboratori mjekësor, Prizren, Kosovo, analizat, ekzaminimet mjekësore, hematologji, biokimi, mikrobiologji",
+  ogImage: "/og-image.jpg"
+};
+
+export const updateMetaTags = (config: Partial<SEOConfig>) => {
+  const finalConfig = { ...defaultSEOConfig, ...config };
+  
+  // Update title
+  document.title = finalConfig.title;
+  
+  // Update meta description
+  updateMetaTag('description', finalConfig.description);
+  
+  // Update keywords
+  if (finalConfig.keywords) {
+    updateMetaTag('keywords', finalConfig.keywords);
+  }
+  
+  // Update canonical URL
+  if (finalConfig.canonical) {
+    updateLinkTag('canonical', finalConfig.canonical);
+  }
+  
+  // Update Open Graph tags
+  updateMetaTag('og:title', finalConfig.title, 'property');
+  updateMetaTag('og:description', finalConfig.description, 'property');
+  if (finalConfig.ogImage) {
+    updateMetaTag('og:image', finalConfig.ogImage, 'property');
+  }
+  
+  // Update Twitter Card tags
+  updateMetaTag('twitter:title', finalConfig.title);
+  updateMetaTag('twitter:description', finalConfig.description);
+  if (finalConfig.ogImage) {
+    updateMetaTag('twitter:image', finalConfig.ogImage);
+  }
+};
+
+const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  let element = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+  if (!element) {
+    element = document.createElement('meta');
+    element.setAttribute(attribute, name);
+    document.head.appendChild(element);
+  }
+  element.content = content;
+};
+
+const updateLinkTag = (rel: string, href: string) => {
+  let element = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement;
+  if (!element) {
+    element = document.createElement('link');
+    element.rel = rel;
+    document.head.appendChild(element);
+  }
+  element.href = href;
+};
+
+// Generate structured data for LocalBusiness
+export const generateLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Laboratori Mjekësor",
+  "description": "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta.",
+  "url": window.location.origin,
+  "telephone": "+383 44 123 456",
+  "email": "info@laboratori-prizren.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rr. Dardanisë, Nr. 15",
+    "addressLocality": "Prizren",
+    "addressCountry": "XK",
+    "postalCode": "20000"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "42.2135",
+    "longitude": "20.7397"
+  },
+  "openingHours": [
+    "Mo-Fr 07:00-19:00",
+    "Sa 08:00-14:00"
+  ],
+  "priceRange": "$$",
+  "image": `${window.location.origin}/og-image.jpg`,
+  "sameAs": [
+    "https://www.facebook.com/laboratori.prizren",
+    "https://www.instagram.com/laboratori.prizren"
+  ],
+  "medicalSpecialty": [
+    "Hematology",
+    "Clinical Chemistry", 
+    "Microbiology",
+    "Immunology"
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalTest",
+      "name": "Analizat e Gjakut",
+      "description": "Analiza të plota të gjakut me teknologji moderne"
+    },
+    {
+      "@type": "MedicalTest", 
+      "name": "Analizat Biokimike",
+      "description": "Testime biokimike për funksionin e organeve"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Analizat Mikrobiologjike", 
+      "description": "Identifikimi i infeksioneve dhe baktereve"
+    }
+  ]
+});
+
+// Add structured data to page
+export const addStructuredData = (schema: any) => {
+  // Remove existing structured data
+  const existing = document.querySelector('script[type="application/ld+json"]');
+  if (existing) {
+    existing.remove();
+  }
+  
+  // Add new structured data
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+};

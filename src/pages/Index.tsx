@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SEOHead from "@/components/SEOHead";
 import ErrorBoundary from "@/components/ui/error-boundary";
 import LoadingSpinner from "@/components/ui/loading-spinner";
 
@@ -16,21 +17,32 @@ const WhatsAppFloat = lazy(() => import("@/components/WhatsAppFloat"));
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead />
       <Header />
-      <Hero />
-      <ErrorBoundary>
-        <Suspense fallback={<LoadingSpinner />}>
-          <div id="about">
-            <About />
-          </div>
-          <TechnologySection />
-          <Services />
-          <ExpertTeam />
-          <Contact />
-          <Footer />
-          <WhatsAppFloat />
-        </Suspense>
-      </ErrorBoundary>
+      <main>
+        <Hero />
+        <ErrorBoundary>
+          <Suspense fallback={<LoadingSpinner />}>
+            <section id="about" aria-label="About our laboratory">
+              <About />
+            </section>
+            <section aria-label="Technology and equipment">
+              <TechnologySection />
+            </section>
+            <section id="services" aria-label="Medical services">
+              <Services />
+            </section>
+            <section aria-label="Expert team">
+              <ExpertTeam />
+            </section>
+            <section id="contact" aria-label="Contact information">
+              <Contact />
+            </section>
+          </Suspense>
+        </ErrorBoundary>
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

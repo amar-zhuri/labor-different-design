@@ -11,10 +11,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Seksioni kryesor i laboratorit">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
+        role="img"
+        aria-label="Laboratori mjekësor modern me pajisje të avancuara për analizat më të sakta në Prizren"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-dark/80"></div>
       </div>
