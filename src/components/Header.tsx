@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -27,78 +30,83 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Rreth Nesh
+              {t('nav.about')}
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Shërbimet
+              {t('nav.services')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary transition-colors font-medium"
             >
-              Kontakti
+              {t('nav.contact')}
             </button>
+            <LanguageSwitcher />
           </nav>
 
           {/* Desktop Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
-              <span>Gjeravica 30, Prizren</span>
+              <span className="hidden xl:inline">Rruga Dëshmorët e Kombit, Ferizaj</span>
+              <span className="xl:hidden">Ferizaj</span>
             </div>
             <Button size="sm" className="flex items-center space-x-2">
               <Phone className="h-4 w-4" />
-              <span>Kontaktoni</span>
+              <span>{t('hero.contact')}</span>
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          {/* Mobile Actions */}
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <button
+              onClick={toggleMenu}
+              className="p-2 rounded-lg hover:bg-accent transition-colors"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-gray-100 shadow-lg">
-            <nav className="p-4 space-y-4">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/98 backdrop-blur-sm border-b border-border shadow-lg">
+            <nav className="p-4 space-y-3">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-accent"
               >
-                Rreth Nesh
+                {t('nav.about')}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-accent"
               >
-                Shërbimet
+                {t('nav.services')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left text-foreground hover:text-primary transition-colors py-2"
+                className="block w-full text-left text-foreground hover:text-primary transition-colors py-3 px-2 rounded-lg hover:bg-accent"
               >
-                Kontakti
+                {t('nav.contact')}
               </button>
-              <div className="pt-4 border-t border-gray-100">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-3">
-                  <MapPin className="h-4 w-4" />
-                  <span>Gjeravica 30, Prizren</span>
+              <div className="pt-4 border-t border-border">
+                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
+                  <MapPin className="h-4 w-4 flex-shrink-0" />
+                  <span>Rruga Dëshmorët e Kombit, Ferizaj</span>
                 </div>
                 <Button size="sm" className="w-full flex items-center justify-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>Kontaktoni</span>
+                  <span>{t('hero.contact')}</span>
                 </Button>
               </div>
             </nav>
