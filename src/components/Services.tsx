@@ -1,4 +1,4 @@
-import { Droplet, Heart, Activity, TestTube, Microscope, FileText } from "lucide-react";
+import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import bloodTestingImage from "@/assets/blood-testing.jpg";
 
@@ -25,14 +25,24 @@ const Services = () => {
       description: "Analiza të enzimave, proteinave dhe substancave kimike në gjak për vlerësimin e funksionit të organeve"
     },
     {
-      icon: Microscope,
-      title: "Mikrobiologji",
-      description: "Identifikimi i mikroorganizmave patogjenë dhe testimi i rezistencës ndaj antibiotikëve"
-    },
-    {
       icon: FileText,
       title: "Raporte të Detajuara",
       description: "Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm"
+    },
+    {
+      icon: Bug,
+      title: "Teste për Sëmundje Infektive",
+      description: "Diagnostikim i saktë për HIV, Hepatit A/B/C, dhe sëmundje të tjera infektive"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Markerë Tumoralë",
+      description: "Teste të specializuara për zbulimin e hershëm të kancerit dhe monitorimin e trajtimit"
+    },
+    {
+      icon: Activity,
+      title: "Panele Alergjike",
+      description: "Identifikimi i alergjive të ndryshme për një jetë më të shëndetshme"
     }
   ];
 
@@ -67,10 +77,6 @@ const Services = () => {
               dhe me kujdesin më të madh për detajet.
             </p>
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                <TestTube className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium">ISO Certifikuar</span>
-              </div>
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Microscope className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium">Teknologji e Re</span>

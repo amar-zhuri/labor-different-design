@@ -14,6 +14,10 @@ const TechnologySection = () => {
     {
       brand: "Siemens Healthineers",
       description: "Pajisje semi-automatike për rezultate të besueshme"
+    },
+    {
+      brand: "Sysmex",
+      description: "Teknologji lider botërore për analizën e gjakut dhe hematologji"
     }
   ];
 
@@ -49,7 +53,7 @@ const TechnologySection = () => {
         </div>
 
         {/* Technology Brands */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {technologies.map((tech, index) => (
             <Card key={index} className="border-0 shadow-medical hover:shadow-lg transition-all duration-300 hover:-translate-y-2 bg-white">
               <CardContent className="p-8 text-center">

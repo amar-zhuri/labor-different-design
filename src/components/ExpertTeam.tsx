@@ -32,10 +32,8 @@ const ExpertTeam = () => {
   const certifications = [
     "Kontroll i Cilësisë Ndërkombëtar",
     "Trajnime nga Roche Diagnostics",
-    "Certifikime Abbott Academy", 
     "Programe Siemens Healthineers",
-    "ISO 15189 Compliance",
-    "Standarde WHO"
+    "Trajnime nga Sysmex Corporation"
   ];
 
   return (
