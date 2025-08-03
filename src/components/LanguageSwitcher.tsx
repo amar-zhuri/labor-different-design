@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLanguage, Language } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu, 
@@ -8,58 +9,32 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
 
-declare global {
-  interface Window {
-    google: any;
-  }
-}
-
 const LanguageSwitcher: React.FC = () => {
-  const [currentLanguage, setCurrentLanguage] = useState('sq');
+  const { language, setLanguage } = useLanguage();
 
   const languages = [
-    { code: 'sq', name: 'Shqip', flag: '🇽🇰' },
-    { code: 'sr', name: 'Српски', flag: '🇷🇸' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'sq' as Language, name: 'Shqip', flag: '🇽🇰' },
+    { code: 'sr' as Language, name: 'Српски', flag: '🇷🇸' },
+    { code: 'en' as Language, name: 'English', flag: '🇺🇸' },
   ];
 
-  const handleLanguageChange = (langCode: string) => {
-    setCurrentLanguage(langCode);
-    
-    // Wait for Google Translate to be available
-    const triggerTranslation = () => {
-      if (window.google && window.google.translate) {
-        const gtCombo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
-        if (gtCombo) {
-          gtCombo.value = langCode;
-          gtCombo.dispatchEvent(new Event('change'));
-        }
-      } else {
-        // If Google Translate isn't ready yet, try again
-        setTimeout(triggerTranslation, 500);
-      }
-    };
-    
-    triggerTranslation();
-  };
-
-  const selectedLanguage = languages.find(lang => lang.code === currentLanguage) || languages[0];
+  const currentLanguage = languages.find(lang => lang.code === language);
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="flex items-center gap-2">
           <Globe className="h-4 w-4" />
-          <span className="hidden sm:inline">{selectedLanguage.name}</span>
-          <span className="sm:hidden">{selectedLanguage.flag}</span>
+          <span className="hidden sm:inline">{currentLanguage?.name}</span>
+          <span className="sm:hidden">{currentLanguage?.flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {languages.map((lang) => (
           <DropdownMenuItem 
             key={lang.code}
-            onClick={() => handleLanguageChange(lang.code)}
-            className={`flex items-center gap-2 ${currentLanguage === lang.code ? 'bg-accent' : ''}`}
+            onClick={() => setLanguage(lang.code)}
+            className={`flex items-center gap-2 ${language === lang.code ? 'bg-accent' : ''}`}
           >
             <span>{lang.flag}</span>
             <span>{lang.name}</span>
