@@ -11,9 +11,9 @@ registerServiceWorker();
 // Initialize performance tracking
 trackWebVitals();
 
-// Initialize Google Analytics (replace with actual measurement ID in production)
+// Initialize Google Analytics
 if (import.meta.env.PROD) {
-  initializeGA('GA_MEASUREMENT_ID');
+  initializeGA('G-XXXXXXXXXX'); // Replace with your actual Google Analytics 4 measurement ID
 }
 
 createRoot(document.getElementById("root")!).render(<App />);

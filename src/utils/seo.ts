@@ -9,9 +9,9 @@ export interface SEOConfig {
 }
 
 export const defaultSEOConfig: SEOConfig = {
-  title: "Laboratori Mjekësor - Analizat më të Sakta në Prizren | Rezultate Online 24/7",
-  description: "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta. Rezultate elektronike 24/7, teknologji e avancuar, ekip ekspert.",
-  keywords: "laboratori mjekësor, Prizren, Kosovo, analizat, rezultate online 24/7, rezultate elektronike, ekzaminimet mjekësore, hematologji, biokimi, mikrobiologji",
+  title: "Laboratori Labor - Analizat më të Sakta në Prizren | Rezultate Online 24/7",
+  description: "Laboratori Labor - laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta. Rezultate elektronike 24/7, teknologji e avancuar, ekip ekspert.",
+  keywords: "laboratori labor, laboratori mjekësor, Prizren, Kosovo, analizat, rezultate online 24/7, rezultate elektronike, ekzaminimet mjekësore, hematologji, biokimi, mikrobiologji, analiza urine",
   ogImage: "/og-image.jpg"
 };
 
@@ -73,14 +73,14 @@ const updateLinkTag = (rel: string, href: string) => {
 export const generateLocalBusinessSchema = () => ({
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Laboratori Mjekësor",
-  "description": "Laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta me rezultate elektronike 24/7.",
-  "url": window.location.origin,
-  "telephone": "+383 44 123 456",
-  "email": "info@laboratori-prizren.com",
+  "name": "Laboratori Labor",
+  "description": "Laboratori Labor - laboratori mjekësor modern në Prizren që ofron analizat më të sakta dhe të shpejta me rezultate elektronike 24/7.",
+  "url": "https://laboratorilabor.com",
+  "telephone": "+383 49 217 859",
+  "email": "info@laboratorilabor.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Rr. Dardanisë, Nr. 15",
+    "streetAddress": "Rr. Gjeravica, Nr.30",
     "addressLocality": "Prizren",
     "addressCountry": "XK",
     "postalCode": "20000"
@@ -95,10 +95,10 @@ export const generateLocalBusinessSchema = () => ({
     "Sa 08:00-14:00"
   ],
   "priceRange": "$$",
-  "image": `${window.location.origin}/og-image.jpg`,
+  "image": "https://laboratorilabor.com/og-image.jpg",
   "sameAs": [
-    "https://www.facebook.com/laboratori.prizren",
-    "https://www.instagram.com/laboratori.prizren"
+    "https://www.facebook.com/lablabor",
+    "https://www.instagram.com/laboratori_labor/"
   ],
   "medicalSpecialty": [
     "Hematology",
@@ -126,6 +126,11 @@ export const generateLocalBusinessSchema = () => ({
       "@type": "MedicalTest",
       "name": "Analizat Mikrobiologjike", 
       "description": "Identifikimi i infeksioneve dhe baktereve me rezultate online"
+    },
+    {
+      "@type": "MedicalTest",
+      "name": "Analizat e Urinës",
+      "description": "Analiza të plota të urinës për diagnostikim të sëmundjeve urologjike"
     }
   ]
 });
