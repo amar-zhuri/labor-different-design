@@ -1,4 +1,4 @@
-import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTriangle, Pill, Zap, Shield, Beaker } from "lucide-react";
+import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTriangle, Pill, Zap, Shield, Beaker, FlaskConical } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import LazyImage from "@/components/ui/lazy-image";
 import bloodTestingImage from "@/assets/blood-testing.jpg";
@@ -77,6 +77,11 @@ const Services = () => {
       icon: Microscope,
       title: t('service.detailed.title'),
       description: t('service.detailed.desc')
+    },
+    {
+      icon: FlaskConical,
+      title: t('service.urine.title'),
+      description: t('service.urine.desc')
     }
   ];
 
