@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type Language = 'sq' | 'bs' | 'en'; // Albanian, Bosnian, English
+export type Language = 'sq' | 'bs' | 'en' | 'tr'; // Albanian, Bosnian, English, Turkish
 
 interface LanguageContextType {
   language: Language;
@@ -423,6 +423,141 @@ const translations = {
     'footer.license': 'Licensed by the Ministry of Health of Kosovo',
     'footer.copyright': '© 2024 Laboratory Labor. All rights reserved.',
     'footer.design': 'Website design by Lovable.'
+  },
+  
+  tr: {
+    // Navigation
+    'nav.about': 'Hakkımızda',
+    'nav.services': 'Hizmetler',
+    'nav.contact': 'İletişim',
+    
+    // Hero Section
+    'hero.title': 'Laboratuvar Labor',
+    'hero.subtitle': '25 yılı aşkın deneyim ve Prizren\'de 500.000+ test ile %99.6 doğruluk oranında profesyonel kan analizi ve tıbbi hizmetler',
+    'hero.address': 'Gjeravica 30, Prizren 20000',
+    'hero.hours': 'Pzt-Cum 07:00-16:00 | Cmt 07:00-13:00',
+    'hero.hours.mobile': '07:00-16:00 (P-C) | 07:00-13:00 (Cmt)',
+    'hero.contact': 'Şimdi İletişime Geçin',
+    'hero.services': 'Hizmetlerimiz',
+    'hero.results247': 'Elektronik sonuçlar 7/24 - Sonuçlarınızı her yerden, her zaman okuyun',
+    
+    // About Section
+    'about.title': 'Neden',
+    'about.title.highlight': 'Laboratuvar Labor\'u Seçmelisiniz',
+    'about.description': 'Tıbbi analiz alanında 25 yılı aşkın deneyimimizle, sağlık ve refah konularında güvenilir ortağınızız. Laboratuvar Labor, Prizren\'de en son teknoloji ve en nitelikli personelle %99.6 doğruluk oranında 500.000\'den fazla test gerçekleştirmiş, uzmanlaşmış hizmetler sunmaktadır.',
+    'about.experience': '25+ Yıl Deneyim',
+    'about.experience.desc': 'İki onluk yıl güvenilir ve profesyonel hizmet ile %99.6 doğruluk oranında 500.000\'den fazla test',
+    'about.security': 'Güvenlik ve Kalite',
+    'about.security.desc': 'En gelişmiş teknoloji ve uluslararası güvenlik standartlarının kullanımı',
+    'about.team': 'Nitelikli Personel',
+    'about.team.desc': 'Tıbbi laboratuvar alanında uzun deneyime sahip eğitimli profesyonel ekip',
+    'about.speed': 'Hızlı Sonuçlar',
+    'about.speed.desc': 'Saatler içinde sonuç - yüksek doğrulukla hızlı işleme ve teslimat',
+    'about.license': 'Kosova Sağlık Otoriteleri Tarafından Lisanslanmış ve Sertifikalandırılmış',
+    
+    // Services Section
+    'services.title': 'Bizim',
+    'services.title.highlight': 'Hizmetlerimiz',
+    'services.description': 'En son teknoloji, en yüksek kalite standartları ve saatler içinde sonuçlarla uzmanlaşmış kan analizi ve tıbbi hizmetler sunuyoruz',
+    'services.advanced.title': 'En Gelişmiş Kan Analizi',
+    'services.advanced.description': 'En modern teknoloji ve nitelikli personelle, tüm kan analizleri için doğru ve hızlı sonuçlar garanti ediyoruz. Her test uluslararası standartlara göre ve detaylara en büyük özenle yapılır.',
+    'services.online247': 'Online Sonuçlar 7/24',
+    'services.online247.desc': 'Sonuçlarınızı telefon, tablet veya bilgisayardan istediğiniz zaman okuyun.',
+    'services.tech': 'Yeni Teknoloji',
+    'services.reports': 'Detaylı Raporlar',
+    
+    // Service Items
+    'service.blood.title': 'Tam Kan Analizi',
+    'service.blood.desc': 'Hücre sayımı, hemoglobin seviyeleri ve diğer önemli parametreleri içeren kapsamlı kan testleri',
+    'service.cardiac.title': 'Kardiyak Profil',
+    'service.cardiac.desc': 'Kalp sağlığı, kolesterol ve trigliserit değerlendirmesi için özel testler',
+    'service.hormonal.title': 'Hormonal Testler',
+    'service.hormonal.desc': 'Endokrin bozuklukların teşhisi için çeşitli hormon seviyelerinin analizi',
+    'service.biochemistry.title': 'Klinik Biyokimya',
+    'service.biochemistry.desc': 'Organ fonksiyonu değerlendirmesi için kandaki enzim, protein ve kimyasal maddelerin analizi',
+    'service.infectious.title': 'Enfeksiyöz Hastalık Testleri',
+    'service.infectious.desc': 'HIV, Hepatit A/B/C ve diğer enfeksiyöz hastalıklar için doğru teşhis',
+    'service.tumor.title': 'Tümör Belirteçleri',
+    'service.tumor.desc': 'Erken kanser tespiti ve tedavi takibi için uzmanlaşmış testler',
+    'service.allergy.title': 'Alerji Panelleri',
+    'service.allergy.desc': 'Daha sağlıklı bir yaşam için çeşitli alerjilerin tanımlanması',
+    'service.electronic.title': 'Elektronik Sonuçlar 7/24',
+    'service.electronic.desc': 'Sonuçlarınızı gece gündüz internet erişimi olan herhangi bir cihazdan online alın',
+    'service.detailed.title': 'Detaylı Raporlar',
+    'service.detailed.desc': 'Profesyonel yorumlama ve sonraki adımlar için önerilerle eksiksiz tıbbi raporlar',
+    
+    // Contact
+    'contact.title': 'Bizimle',
+    'contact.title.highlight': 'İletişime Geçin',
+    'contact.description': 'Tıbbi hizmetlerimizle ilgili tüm sorularınızda size yardımcı olmak için buradayız. Ek bilgi almak veya randevu almak için bizimle iletişime geçin.',
+    'contact.address': 'Adres',
+    'contact.phone': 'Telefon',
+    'contact.hours': 'Çalışma Saatleri',
+    'contact.email': 'E-posta',
+    'contact.visit': 'Laboratuvarımızı Ziyaret Edin',
+    'contact.visit.desc': 'Laboratuvar Labor, Prizren merkezinde, kolayca ulaşılabilir bir konumda yer almaktadır. Tüm hastalarımız için rahat ve profesyonel bir ortam sağlıyoruz.',
+    'contact.phone.desc': 'Bilgi ve sorular için',
+    'contact.email.desc': 'Elektronik iletişim için',
+    'contact.closed': 'Kapalı',
+    'contact.parking': 'Laboratuvar yakınında park yeri mevcuttur',
+    'contact.call': 'Şimdi Arayın',
+    'contact.whatsapp': 'WhatsApp',
+    'contact.directions': 'Google Maps\'te Yol Tarifi Alın',
+    
+    // Working Hours
+    'hours.weekdays': 'Pazartesi - Cuma: 07:00 - 16:00',
+    'hours.saturday': 'Cumartesi: 07:00 - 13:00',
+    'hours.sunday': 'Pazar: Kapalı',
+    'hours.short': 'Pazartesi-Cuma: 07:00-16:00 | Cumartesi: 07:00-13:00',
+    
+    // Technology Section
+    'tech.title': 'En Gelişmiş',
+    'tech.title.highlight': 'Teknoloji',
+    'tech.description': 'Hastalarımız için en doğru ve hızlı sonuçları sağlamak için önde gelen küresel şirketlerden en son teknolojiye yatırım yapıyoruz',
+    'tech.roche': 'Biyokimyasal ve immünolojik analiz için gelişmiş sistemler',
+    'tech.abbott': 'Doğru ve hızlı teşhis için modern teknoloji',
+    'tech.siemens': 'Güvenilir sonuçlar için yarı otomatik cihazlar',
+    'tech.sysmex': 'Kan analizi ve hematoloji için dünya lideri teknoloji',
+    'tech.quality': 'Kalite Kontrol',
+    'tech.quality.desc': 'Uluslararası kalite kontrol programlarına katılım',
+    'tech.training': 'Uluslararası Eğitim',
+    'tech.training.desc': 'Personelimiz düzenli olarak uluslararası eğitimlere katılır',
+    'tech.security': 'Süreç Güvenliği',
+    'tech.security.desc': 'Sertifikalı kalite güvence süreçleri ve günlük kalibrasyon',
+    'tech.award': 'En iyi Avrupa hastanelerinde kullanılan aynı teknoloji',
+    
+    // Expert Team Section
+    'team.title': 'En Nitelikli',
+    'team.title.highlight': 'Ekip',
+    'team.description': 'Personelimiz, tıbbi laboratuvar alanında yüksek nitelikler ve uzun deneyime sahip doktor ve teknisyenlerden oluşmaktadır',
+    'team.experience': 'Deneyimli Doktor ve Teknisyenler',
+    'team.experience.desc': 'Onlarca yıllık deneyime sahip nitelikli doktor ve teknisyen ekibi',
+    'team.experience.detail': 'Personelin çoğu 15 yıldan fazla deneyime sahiptir',
+    'team.international': 'Uluslararası Eğitim',
+    'team.international.desc': 'Uluslararası eğitim ve konferanslara düzenli katılım',
+    'team.international.detail': 'Sürekli bilgi güncellemeleri',
+    'team.standards': 'Avrupa Standartları',
+    'team.standards.desc': 'Avrupa laboratuvar protokol ve standartlarının uygulanması',
+    'team.standards.detail': 'AB ülkeleri seviyesinde kalite',
+    'team.supervision': 'Tıbbi Denetim',
+    'team.supervision.desc': 'Tüm sonuçlar uzman doktorlar tarafından gözden geçirilir',
+    'team.supervision.detail': 'Maksimum doğruluk için çifte kontrol',
+    'team.certifications': 'Sertifikalar ve Nitelikler',
+    'team.certifications.desc': 'Laboratuvar tıbbındaki en son gelişmelere ayak uydurmamızı sağlamak için personelimizin eğitim ve öğretimine sürekli yatırım yapıyoruz.',
+    'team.cert1': 'Uluslararası Kalite Kontrol',
+    'team.cert2': 'Roche Diagnostics Eğitimi',
+    'team.cert3': 'Siemens Healthineers Programları',
+    'team.cert4': 'Sysmex Corporation Eğitimi',
+    'team.expertise': 'Tanınmış Uzmanlık',
+    'team.expertise.desc': 'Laboratuvarımız bölgede hizmet kalitesi ve personel uzmanlığı ile tanınmaktadır.',
+    'team.tests': 'Yapılan Testler',
+    'team.accuracy': 'Sonuç Doğruluğu',
+    
+    // Footer
+    'footer.description': '25 yılı aşkın deneyimle tıbbi analiz alanında Laboratuvar Labor, sağlık ve refah konularında Prizren\'de güvenilir ortağınızdır.',
+    'footer.license': 'Kosova Sağlık Bakanlığı Tarafından Lisanslanmıştır',
+    'footer.copyright': '© 2024 Laboratuvar Labor. Tüm hakları saklıdır.',
+    'footer.design': 'Web sitesi tasarımı Lovable tarafından yapılmıştır.'
   }
 };
 
