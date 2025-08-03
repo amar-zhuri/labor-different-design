@@ -31,11 +31,21 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6 h-auto">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-lg px-8 py-6 h-auto"
+              onClick={() => window.open('tel:+38344217859', '_self')}
+            >
               <Phone className="mr-2 h-5 w-5" />
               Kontaktoni Tash
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-primary">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-lg px-8 py-6 h-auto border-white text-white hover:bg-white hover:text-primary"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Shërbimet Tona
             </Button>
           </div>

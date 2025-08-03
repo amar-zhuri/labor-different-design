@@ -83,7 +83,11 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <Button className="mt-8" size="lg">
+              <Button 
+                className="mt-8" 
+                size="lg"
+                onClick={() => window.open('tel:+38344217859', '_self')}
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Telefononi Tani
               </Button>
