@@ -83,32 +83,36 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6 md:mt-8">
-                <Button 
-                  size="lg"
-                  className="w-full sm:w-auto"
-                  onClick={() => window.open('tel:+38344217859', '_self')}
-                >
-                  <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  Telefononi Tani
-                </Button>
+              <div className="flex flex-col gap-3 mt-6 md:mt-8">
+                {/* Primary action buttons row */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button 
+                    size="lg"
+                    className="w-full sm:flex-1"
+                    onClick={() => window.open('tel:+38344217859', '_self')}
+                  >
+                    <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
+                    Telefononi Tani
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="bg-green-500 text-white border-green-500 hover:bg-green-600 hover:border-green-600 w-full sm:flex-1"
+                    onClick={() => window.open('https://wa.me/38344217859', '_blank')}
+                  >
+                    <MessageSquare className="mr-2 h-4 md:h-5 w-4 md:w-5" />
+                    WhatsApp
+                  </Button>
+                </div>
+                {/* Directions button - separate row for better mobile layout */}
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="bg-green-500 text-white border-green-500 hover:bg-green-600 hover:border-green-600 w-full sm:w-auto"
-                  onClick={() => window.open('https://wa.me/38344217859', '_blank')}
-                >
-                  <MessageSquare className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  WhatsApp
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600 w-full sm:w-auto"
+                  className="bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600 w-full"
                   onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=Laboratori+Labor,+Gjeravica+30,+Prizren+20000,+Kosovo', '_blank')}
                 >
                   <Navigation className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  Udhëzimet
+                  Merr Udhëzimet në Google Maps
                 </Button>
               </div>
             </div>
