@@ -41,7 +41,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-foreground/90 hover:text-primary transition-colors font-medium hover:font-semibold"
             >
               {t('nav.services')}
             </button>
