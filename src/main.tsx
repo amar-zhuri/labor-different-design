@@ -4,6 +4,16 @@ import './index.css'
 import { registerServiceWorker } from './utils/sw-register'
 import { trackWebVitals } from './utils/performance'
 import { initializeGA } from './utils/analytics'
+import { inlineCriticalCSS, preloadNonCriticalCSS, optimizeFontLoading } from './utils/critical-css'
+
+// Inline critical CSS for faster rendering
+inlineCriticalCSS();
+
+// Optimize font loading
+optimizeFontLoading();
+
+// Preload non-critical CSS
+preloadNonCriticalCSS();
 
 // Register service worker for caching
 registerServiceWorker();
