@@ -92,6 +92,8 @@ const translations = {
     'service.electronic.desc': 'Merrni rezultatet tuaja online në çdo kohë të ditës dhe natës, nga çdo pajisje me qasje në internet',
     'service.detailed.title': 'Raporte të Detajuara',
     'service.detailed.desc': 'Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm',
+    'services.more.title': 'Shërbime të Tjera',
+    'services.more.description': 'Ofrojmë më shumë analiza dhe teste të specializuara sesa ato të listuara këtu. Për informacion të plotë mbi të gjitha shërbimet tona, na kontaktoni në WhatsApp, mediat sociale ose vizitoni lokacionin tonë.',
     
     // Contact
     'contact.title': 'Kontaktoni',
@@ -244,6 +246,8 @@ const translations = {
     'service.electronic.desc': 'Dobijte rezultate online bilo kada tokom dana i noći, sa bilo kog uređaja sa pristupom internetu',
     'service.detailed.title': 'Detaljni izveštaji',
     'service.detailed.desc': 'Kompletni medicinski izveštaji sa profesionalnim tumačenjem i preporukama za dalje korake',
+    'services.more.title': 'Dodatne usluge',
+    'services.more.description': 'Nudimo više analiza i specijalizovanih testova nego što su ovde navedeni. Za potpune informacije o svim našim uslugama, kontaktirajte nas preko WhatsApp-a, društvenih mreža ili posetite našu lokaciju.',
     
     // Contact
     'contact.title': 'Kontaktirajte',
@@ -396,6 +400,8 @@ const translations = {
     'service.electronic.desc': 'Get your results online anytime day or night, from any device with internet access',
     'service.detailed.title': 'Detailed Reports',
     'service.detailed.desc': 'Complete medical reports with professional interpretation and recommendations for next steps',
+    'services.more.title': 'Additional Services',
+    'services.more.description': 'We offer more analyses and specialized tests than those listed here. For complete information about all our services, contact us on WhatsApp, social media, or visit our location.',
     
     // Contact
     'contact.title': 'Contact',
@@ -548,6 +554,8 @@ const translations = {
     'service.electronic.desc': 'Sonuçlarınızı gece gündüz internet erişimi olan herhangi bir cihazdan online alın',
     'service.detailed.title': 'Detaylı Raporlar',
     'service.detailed.desc': 'Profesyonel yorumlama ve sonraki adımlar için önerilerle eksiksiz tıbbi raporlar',
+    'services.more.title': 'Ek Hizmetler',
+    'services.more.description': 'Burada listelenenlerden daha fazla analiz ve uzman testler sunuyoruz. Tüm hizmetlerimiz hakkında tam bilgi için WhatsApp, sosyal medya üzerinden bize ulaşın veya lokasyonumuzu ziyaret edin.',
     
     // Contact
     'contact.title': 'Bizimle',

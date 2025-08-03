@@ -149,6 +149,17 @@ const Services = () => {
             </Card>
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              {t('services.more.title')}
+            </h3>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {t('services.more.description')}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
