@@ -61,7 +61,11 @@ const Header = () => {
               <span className="hidden xl:inline">Rruga Dëshmorët e Kombit, Ferizaj</span>
               <span className="xl:hidden">Ferizaj</span>
             </div>
-            <Button size="sm" className="flex items-center space-x-2">
+            <Button 
+              size="sm" 
+              className="flex items-center space-x-2"
+              onClick={() => window.open('tel:+38344217859', '_self')}
+            >
               <Phone className="h-4 w-4" />
               <span>{t('hero.contact')}</span>
             </Button>
@@ -81,7 +85,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white/98 backdrop-blur-sm border-b border-border shadow-lg z-40">
+          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-b border-border shadow-lg z-40">
             <nav className="p-4 space-y-3">
               <button 
                 onClick={() => scrollToSection('about')}
@@ -106,7 +110,11 @@ const Header = () => {
                   <MapPin className="h-4 w-4 flex-shrink-0" />
                   <span>Rruga Dëshmorët e Kombit, Ferizaj</span>
                 </div>
-                <Button size="sm" className="w-full flex items-center justify-center space-x-2">
+                <Button 
+                  size="sm" 
+                  className="w-full flex items-center justify-center space-x-2"
+                  onClick={() => window.open('tel:+38344217859', '_self')}
+                >
                   <Phone className="h-4 w-4" />
                   <span>{t('hero.contact')}</span>
                 </Button>
