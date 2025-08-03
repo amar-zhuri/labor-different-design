@@ -7,9 +7,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold mb-4">
-              Laboratori <span className="text-primary-light">Labor</span>
-            </div>
+            <img 
+              src="/lovable-uploads/34c49b4a-27df-4c53-b230-575af90598b4.png" 
+              alt="Laboratori Labor Logo"
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
               Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, Laboratori Labor 
               është partneri juaj i besueshëm për shëndetin dhe mirëqenien tuaj në Prizren.

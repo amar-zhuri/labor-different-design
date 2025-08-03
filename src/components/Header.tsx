@@ -24,9 +24,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary">
-              Laboratori <span className="text-foreground">Labor</span>
-            </div>
+            <img 
+              src="/lovable-uploads/34c49b4a-27df-4c53-b230-575af90598b4.png" 
+              alt="Laboratori Labor Logo"
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}

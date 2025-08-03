@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@laboratorilabor.com", "Për komunikim elektronik"]
+      details: ["laboratorilabor@gmail.com", "Për komunikim elektronik"]
     }
   ];
 
