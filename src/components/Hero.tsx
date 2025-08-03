@@ -1,8 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock } from "lucide-react";
 import heroImage from "@/assets/laboratory-hero.jpg";
+import { useEffect } from "react";
+import { preloadCriticalResources } from "@/utils/performance";
 
 const Hero = () => {
+  useEffect(() => {
+    // Preload critical resources for better performance
+    preloadCriticalResources([heroImage]);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div 

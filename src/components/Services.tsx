@@ -1,5 +1,6 @@
 import { Droplet, Heart, Activity, TestTube, Microscope, FileText, Bug, AlertTriangle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import LazyImage from "@/components/ui/lazy-image";
 import bloodTestingImage from "@/assets/blood-testing.jpg";
 
 const Services = () => {
@@ -61,7 +62,7 @@ const Services = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <img 
+            <LazyImage 
               src={bloodTestingImage} 
               alt="Analiza të gjakut në Laboratorin Labor"
               className="rounded-2xl shadow-medical w-full"

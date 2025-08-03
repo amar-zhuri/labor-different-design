@@ -116,6 +116,35 @@ All colors MUST be HSL.
     /* Enhanced mobile text readability */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Performance optimizations */
+    font-display: swap;
+    will-change: scroll-position;
+  }
+
+  /* Critical CSS for above-the-fold content */
+  .hero-critical {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+  }
+
+  /* Optimize image loading */
+  img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px;
+  }
+
+  /* Optimize animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   /* Mobile-first responsive improvements */
