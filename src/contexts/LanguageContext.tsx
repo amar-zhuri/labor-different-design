@@ -149,7 +149,7 @@ const translations = {
     'team.accuracy': 'Saktësi në Rezultate',
     
     // Footer
-    'footer.description': 'Laboratori Labor - Analizat më të sakta në Kosovë me mbi 25 vjet përvojë.',
+    'footer.description': 'Me mbi 25 vjet eksperiencë në fushën e analizave mjekësore, Laboratori Labor është partneri juaj i besueshëm për shëndetin dhe mirëqenien tuaj në Prizren.',
     'footer.license': 'Licencuar nga Ministria e Shëndetësisë së Kosovës',
     'footer.copyright': '© 2024 Laboratori Labor. Të gjitha të drejtat e rezervuara.',
     'footer.design': 'Dizajni i faqes nga Lovable.'
@@ -284,7 +284,7 @@ const translations = {
     'team.accuracy': 'Tačnost rezultata',
     
     // Footer
-    'footer.description': 'Laboratorija Labor - Najprecizniji testovi u Kosovu sa preko 25 godina iskustva.',
+    'footer.description': 'Sa preko 25 godina iskustva u oblasti medicinskih analiza, Laboratorija Labor je vaš pouzdan partner za zdravlje i blagostanje u Prizrenu.',
     'footer.license': 'Licenciran od strane Ministarstva zdravlja Kosova',
     'footer.copyright': '© 2024 Laboratorija Labor. Sva prava zadržana.',
     'footer.design': 'Dizajn stranice od Lovable.'
@@ -419,7 +419,7 @@ const translations = {
     'team.accuracy': 'Accuracy in Results',
     
     // Footer
-    'footer.description': 'Laboratory Labor - Most accurate tests in Kosovo with over 25 years of experience.',
+    'footer.description': 'With over 25 years of experience in medical analysis, Laboratory Labor is your trusted partner for health and wellness in Prizren.',
     'footer.license': 'Licensed by the Ministry of Health of Kosovo',
     'footer.copyright': '© 2024 Laboratory Labor. All rights reserved.',
     'footer.design': 'Website design by Lovable.'
