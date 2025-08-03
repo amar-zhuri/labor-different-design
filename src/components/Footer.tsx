@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="lg:col-span-2">
             <img 
-              src="/lovable-uploads/34c49b4a-27df-4c53-b230-575af90598b4.png" 
+              src="/lovable-uploads/6e44207e-0580-48ea-a530-d5f391e4f8d2.png" 
               alt="Laboratori Labor Logo"
               className="h-16 w-auto mb-4"
             />
