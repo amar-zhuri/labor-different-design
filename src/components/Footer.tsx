@@ -48,7 +48,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Clock className="h-4 w-4 flex-shrink-0" />
                 <div>
-                  <p className="font-medium">Hënë - Enjte</p>
+                  <p className="font-medium">Hënë - Premte</p>
                   <p className="text-primary-foreground/80">07:00 - 16:00</p>
                 </div>
               </div>

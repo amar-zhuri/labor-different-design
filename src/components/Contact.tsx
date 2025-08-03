@@ -17,7 +17,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Orari i Punës",
-      details: ["Monday - Friday: 07:00 - 16:00", "Shtunë: 07:00 - 13:00", "E Diel: E mbyllur"]
+      details: ["Hënë - Premte: 07:00 - 16:00", "Shtunë: 07:00 - 13:00", "E Diel: E mbyllur"]
     },
     {
       icon: Mail,
@@ -79,7 +79,7 @@ const Contact = () => {
                   <Clock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-foreground">Orari i Punës</p>
-                    <p className="text-sm text-muted-foreground">Monday-Friday: 07:00-16:00 | Shtunë: 07:00-13:00</p>
+                    <p className="text-sm text-muted-foreground">Hënë-Premte: 07:00-16:00 | Shtunë: 07:00-13:00</p>
                   </div>
                 </div>
               </div>

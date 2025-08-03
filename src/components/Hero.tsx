@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center gap-2 text-lg">
               <Clock className="h-5 w-5" />
-              <span>Hën-Enjte 07:00-16:00 | Sht 07:00-13:00</span>
+              <span>Hën-Premte 07:00-16:00 | Sht 07:00-13:00</span>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
