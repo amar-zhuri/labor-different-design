@@ -69,6 +69,11 @@ const Services = () => {
       description: t('service.heavymetals.desc')
     },
     {
+      icon: FlaskConical,
+      title: t('service.urine.title'),
+      description: t('service.urine.desc')
+    },
+    {
       icon: FileText,
       title: t('service.electronic.title'),
       description: t('service.electronic.desc')
@@ -77,11 +82,6 @@ const Services = () => {
       icon: Microscope,
       title: t('service.detailed.title'),
       description: t('service.detailed.desc')
-    },
-    {
-      icon: FlaskConical,
-      title: t('service.urine.title'),
-      description: t('service.urine.desc')
     }
   ];
 
