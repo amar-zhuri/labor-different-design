@@ -1,41 +1,43 @@
 import { Award, Microscope, Clock, Shield, Users, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TechnologySection = () => {
+  const { t } = useLanguage();
   const technologies = [
     {
       brand: "Roche",
-      description: "Sisteme të avancuara për analizë biokimike dhe imunologjike"
+      description: t('tech.roche')
     },
     {
       brand: "Abbott",
-      description: "Teknologji moderne për diagnostikim të saktë dhe të shpejtë"
+      description: t('tech.abbott')
     },
     {
       brand: "Siemens Healthineers",
-      description: "Pajisje semi-automatike për rezultate të besueshme"
+      description: t('tech.siemens')
     },
     {
       brand: "Sysmex",
-      description: "Teknologji lider botërore për analizën e gjakut dhe hematologji"
+      description: t('tech.sysmex')
     }
   ];
 
   const qualityFeatures = [
     {
       icon: Shield,
-      title: "Kontroll i Cilësisë",
-      description: "Pjesëmarrje në programe ndërkombëtare të kontrollit të cilësisë"
+      title: t('tech.quality'),
+      description: t('tech.quality.desc')
     },
     {
       icon: Users,
-      title: "Trajnime Ndërkombëtare",
-      description: "Stafi ynë merr pjesë rregullisht në trajnime ndërkombëtare"
+      title: t('tech.training'),
+      description: t('tech.training.desc')
     },
     {
       icon: CheckCircle,
-      title: "Siguri e Proceseve",
-      description: "Procese të certifikuara të sigurimit të cilësisë dhe kalibrimit ditor"
+      title: t('tech.security'),
+      description: t('tech.security.desc')
     }
   ];
 
@@ -44,11 +46,10 @@ const TechnologySection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-medical-blue-foreground">
-            Teknologjia më e <span className="text-primary">Avancuar</span>
+            {t('tech.title')} <span className="text-primary">{t('tech.title.highlight')}</span>
           </h2>
           <p className="text-xl text-medical-blue-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Investojmë në teknologjinë më të re nga kompanitë lider botërore për të siguruar 
-            rezultatet më të sakta dhe të shpejta për pacientët tanë
+            {t('tech.description')}
           </p>
         </div>
 
@@ -85,7 +86,7 @@ const TechnologySection = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full text-primary font-semibold">
             <Award className="h-5 w-5" />
-            <span>Teknologji e njëjtë e përdorur në spitalet më të mira evropiane</span>
+            <span>{t('tech.award')}</span>
           </div>
         </div>
       </div>
