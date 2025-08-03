@@ -88,8 +88,7 @@ const Services = () => {
                 <span className="font-semibold">Rezultate Online 24/7</span>
               </div>
               <p className="text-green-600 text-sm">
-                Lexoni rezultatet tuaja në çdo kohë nga telefoni, tableti ose kompjuteri. 
-                Merrni njoftim automatik në email sapo rezultatet të jenë gati.
+                Lexoni rezultatet tuaja në çdo kohë nga telefoni, tableti ose kompjuteri.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
