@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import ExpertTeam from "@/components/ExpertTeam";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <ExpertTeam />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

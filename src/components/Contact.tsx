@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -83,14 +83,24 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-              <Button 
-                className="mt-8" 
-                size="lg"
-                onClick={() => window.open('tel:+38344217859', '_self')}
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Telefononi Tani
-              </Button>
+              <div className="flex gap-4 mt-8">
+                <Button 
+                  size="lg"
+                  onClick={() => window.open('tel:+38344217859', '_self')}
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Telefononi Tani
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="bg-green-500 text-white border-green-500 hover:bg-green-600 hover:border-green-600"
+                  onClick={() => window.open('https://wa.me/38344217859', '_blank')}
+                >
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  WhatsApp
+                </Button>
+              </div>
             </div>
             <div className="rounded-xl h-80 overflow-hidden">
               <iframe 
