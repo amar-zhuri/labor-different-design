@@ -58,8 +58,8 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4" />
-              <span className="hidden xl:inline">Rruga Dëshmorët e Kombit, Ferizaj</span>
-              <span className="xl:hidden">Ferizaj</span>
+              <span className="hidden xl:inline">Gjeravica 30, Prizren 20000</span>
+              <span className="xl:hidden">Prizren</span>
             </div>
             <Button 
               size="sm" 
@@ -108,7 +108,7 @@ const Header = () => {
               <div className="pt-4 border-t border-border">
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
                   <MapPin className="h-4 w-4 flex-shrink-0" />
-                  <span>Rruga Dëshmorët e Kombit, Ferizaj</span>
+                  <span>Gjeravica 30, Prizren 20000, Republika e Kosovës</span>
                 </div>
                 <Button 
                   size="sm" 
