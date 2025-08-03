@@ -27,6 +27,11 @@ const Services = () => {
     },
     {
       icon: FileText,
+      title: "Rezultate Elektronike 24/7",
+      description: "Merrni rezultatet tuaja online në çdo kohë të ditës dhe natës, nga çdo pajisje me qasje në internet"
+    },
+    {
+      icon: FileText,
       title: "Raporte të Detajuara",
       description: "Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm"
     },
@@ -77,6 +82,16 @@ const Services = () => {
               dhe të shpejta për të gjitha analizat e gjakut. Çdo test kryhet sipas standardeve ndërkombëtare 
               dhe me kujdesin më të madh për detajet.
             </p>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+              <div className="flex items-center gap-2 text-green-700 mb-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="font-semibold">Rezultate Online 24/7</span>
+              </div>
+              <p className="text-green-600 text-sm">
+                Lexoni rezultatet tuaja në çdo kohë nga telefoni, tableti ose kompjuteri. 
+                Merrni njoftim automatik në email sapo rezultatet të jenë gati.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
                 <Microscope className="h-4 w-4 text-primary" />

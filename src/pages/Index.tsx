@@ -8,7 +8,6 @@ import LoadingSpinner from "@/components/ui/loading-spinner";
 // Lazy load non-critical components
 const About = lazy(() => import("@/components/About"));
 const TechnologySection = lazy(() => import("@/components/TechnologySection"));
-const DigitalServices = lazy(() => import("@/components/DigitalServices"));
 const Services = lazy(() => import("@/components/Services"));
 const ExpertTeam = lazy(() => import("@/components/ExpertTeam"));
 const Contact = lazy(() => import("@/components/Contact"));
@@ -29,9 +28,6 @@ const Index = () => {
             </section>
             <section aria-label="Technology and equipment">
               <TechnologySection />
-            </section>
-            <section aria-label="Digital services and online results">
-              <DigitalServices />
             </section>
             <section id="services" aria-label="Medical services">
               <Services />
