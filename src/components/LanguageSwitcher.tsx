@@ -26,23 +26,21 @@ const LanguageSwitcher: React.FC = () => {
   const handleLanguageChange = (langCode: string) => {
     setCurrentLanguage(langCode);
     
-    // Simple approach: trigger Google Translate by setting language in URL
-    const currentUrl = new URL(window.location.href);
-    if (langCode === 'sq') {
-      // Remove translation parameters to show original content
-      currentUrl.searchParams.delete('tl');
-      currentUrl.searchParams.delete('sl');
-      currentUrl.hash = '';
-    } else {
-      // Add Google Translate parameters
-      currentUrl.searchParams.set('tl', langCode);
-      currentUrl.searchParams.set('sl', 'sq');
-    }
+    // Wait for Google Translate to be available
+    const triggerTranslation = () => {
+      if (window.google && window.google.translate) {
+        const gtCombo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+        if (gtCombo) {
+          gtCombo.value = langCode;
+          gtCombo.dispatchEvent(new Event('change'));
+        }
+      } else {
+        // If Google Translate isn't ready yet, try again
+        setTimeout(triggerTranslation, 500);
+      }
+    };
     
-    // Reload page with new language settings
-    setTimeout(() => {
-      window.location.href = currentUrl.toString();
-    }, 100);
+    triggerTranslation();
   };
 
   const selectedLanguage = languages.find(lang => lang.code === currentLanguage) || languages[0];
