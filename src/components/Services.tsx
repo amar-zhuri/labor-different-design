@@ -26,16 +26,6 @@ const Services = () => {
       description: "Analiza të enzimave, proteinave dhe substancave kimike në gjak për vlerësimin e funksionit të organeve"
     },
     {
-      icon: FileText,
-      title: "Rezultate Elektronike 24/7",
-      description: "Merrni rezultatet tuaja online në çdo kohë të ditës dhe natës, nga çdo pajisje me qasje në internet"
-    },
-    {
-      icon: FileText,
-      title: "Raporte të Detajuara",
-      description: "Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm"
-    },
-    {
       icon: Bug,
       title: "Teste për Sëmundje Infektive",
       description: "Diagnostikim i saktë për HIV, Hepatit A/B/C, dhe sëmundje të tjera infektive"
@@ -49,6 +39,16 @@ const Services = () => {
       icon: Activity,
       title: "Panele Alergjike",
       description: "Identifikimi i alergjive të ndryshme për një jetë më të shëndetshme"
+    },
+    {
+      icon: FileText,
+      title: "Rezultate Elektronike 24/7",
+      description: "Merrni rezultatet tuaja online në çdo kohë të ditës dhe natës, nga çdo pajisje me qasje në internet"
+    },
+    {
+      icon: FileText,
+      title: "Raporte të Detajuara",
+      description: "Raporte të plota mjekësore me interpretim profesional dhe rekomandime për hapat e mëtejshëm"
     }
   ];
 
