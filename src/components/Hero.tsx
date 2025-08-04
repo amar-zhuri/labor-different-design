@@ -57,7 +57,7 @@ const Hero = () => {
               onClick={() => window.open('tel:+38344217859', '_self')}
             >
               <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-              Kontaktoni Tani
+              {t('hero.contact')}
             </Button>
             <Button 
               size="lg" 
