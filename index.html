@@ -74,6 +74,15 @@
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="/lec6niZqdlKG/iE2sLSjA" async></script>
     
+    <!-- GTM Custom HTML for Ahrefs Analytics -->
+    <script>
+    var ahrefs_analytics_script = document.createElement('script');
+    ahrefs_analytics_script.async = true;
+    ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
+    ahrefs_analytics_script.setAttribute('data-key', '/lec6niZqdlKG/iE2sLSjA');
+    document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
+    </script>
+    
     <!-- Performance optimization -->
     <link rel="preload" href="/src/main.tsx" as="script" crossorigin />
     <link rel="preload" href="/src/index.css" as="style" />
