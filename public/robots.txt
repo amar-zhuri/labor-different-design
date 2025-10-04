@@ -1,32 +1,42 @@
 # Robots.txt for laboratorilabor.com
+# Last updated: 2025-01-04
 
 # AI Crawlers - Explicitly Allow
 User-agent: GPTBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: ChatGPT-User
 Allow: /
+Crawl-delay: 1
 
 User-agent: Google-Extended
 Allow: /
+Crawl-delay: 1
 
 User-agent: anthropic-ai
 Allow: /
+Crawl-delay: 1
 
 User-agent: Claude-Web
 Allow: /
+Crawl-delay: 1
 
 User-agent: ClaudeBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: PerplexityBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: YouBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: cohere-ai
 Allow: /
+Crawl-delay: 1
 
 # Search Engine Crawlers
 User-agent: Googlebot
@@ -36,6 +46,22 @@ Crawl-delay: 1
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
 
 # Social Media Crawlers
 User-agent: Twitterbot
@@ -50,17 +76,33 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
 # Default for all other bots
 User-agent: *
 Allow: /
 Crawl-delay: 2
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://laboratorilabor.com/sitemap.xml
 
-# Block access to development files only
+# Allow access to machine-readable data files
+Allow: /services.json
+Allow: /hours.json
+Allow: /about.txt
+Allow: /*.json$
+
+# Block access to development and sensitive files
 Disallow: /src/
 Disallow: /*.tsx$
 Disallow: /*.ts$
 Disallow: /.git/
 Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /vite.config.ts
+Disallow: /tsconfig.json

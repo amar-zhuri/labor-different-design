@@ -1,0 +1,120 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Laboratori Labor Services",
+  "description": "Comprehensive medical laboratory services offered by Laboratori Labor in Prizren",
+  "itemListElement": [
+    {
+      "@type": "MedicalTest",
+      "position": 1,
+      "name": "Analiza e Gjakut të Plotë",
+      "description": "Analiza komplekse që përfshijnë numërimin e qelizave, nivelet e hemoglobinës dhe parametra të tjerë të rëndësishëm",
+      "alternateName": "Complete Blood Count",
+      "medicalSpecialty": "Hematology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 2,
+      "name": "Profili Kardiak",
+      "description": "Teste për vlerësimin e shëndetit të zemrës, kolesterolit dhe triglicerideve",
+      "alternateName": "Cardiac Profile",
+      "medicalSpecialty": "Clinical Chemistry"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 3,
+      "name": "Teste Hormonale",
+      "description": "Analiza të nivelit të hormoneve për diagnostikimin e çrregullimeve endokrine",
+      "alternateName": "Hormonal Tests",
+      "medicalSpecialty": "Endocrinology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 4,
+      "name": "Biokimia Klinike",
+      "description": "Analiza të enzimave, proteinave dhe substancave kimike në gjak",
+      "alternateName": "Clinical Biochemistry",
+      "medicalSpecialty": "Clinical Chemistry"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 5,
+      "name": "Teste për Sëmundje Infektive",
+      "description": "Diagnostikim për HIV, Hepatit A/B/C dhe sëmundje të tjera infektive",
+      "alternateName": "Infectious Disease Testing",
+      "medicalSpecialty": "Microbiology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 6,
+      "name": "Markerë Tumoralë",
+      "description": "Teste të specializuara për zbulimin e hershëm të kancerit",
+      "alternateName": "Tumor Markers",
+      "medicalSpecialty": "Oncology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 7,
+      "name": "Panele Alergjike",
+      "description": "Identifikimi i alergjive të ndryshme",
+      "alternateName": "Allergy Panels",
+      "medicalSpecialty": "Immunology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 8,
+      "name": "Paneli i Diabetit",
+      "description": "HbA1c, toleranca e glukozës, nivelet e insulinës",
+      "alternateName": "Diabetes Panel",
+      "medicalSpecialty": "Endocrinology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 9,
+      "name": "Paneli i Tiroideës",
+      "description": "TSH, T3, T4, antitrupat Anti-TPO",
+      "alternateName": "Thyroid Panel",
+      "medicalSpecialty": "Endocrinology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 10,
+      "name": "Vitamina & Minerale",
+      "description": "B12, D3, Hekur, Folate dhe minerale thelbësore",
+      "alternateName": "Vitamins & Minerals",
+      "medicalSpecialty": "Clinical Chemistry"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 11,
+      "name": "Sëmundje Autoimmune",
+      "description": "ANA, RF, Anti-CCP dhe markerë autoimmunë",
+      "alternateName": "Autoimmune Diseases",
+      "medicalSpecialty": "Immunology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 12,
+      "name": "Metale të Rënda",
+      "description": "Testim për plumb, merkur, kadmium dhe metale toksike",
+      "alternateName": "Heavy Metals",
+      "medicalSpecialty": "Toxicology"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 13,
+      "name": "Analiza e Urinës",
+      "description": "Testim i plotë për vlerësimin e funksionit të veshkave",
+      "alternateName": "Urinalysis",
+      "medicalSpecialty": "Clinical Chemistry"
+    },
+    {
+      "@type": "MedicalTest",
+      "position": 14,
+      "name": "Rezultate Elektronike 24/7",
+      "description": "Qasje online në rezultatet e testeve në çdo kohë të ditës dhe natës nga telefoni, tableti ose kompjuteri",
+      "alternateName": "Online Results 24/7",
+      "medicalSpecialty": "Medical Laboratory"
+    }
+  ]
+}

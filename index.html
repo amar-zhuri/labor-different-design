@@ -54,22 +54,40 @@
     <meta name="ICBM" content="42.2135, 20.7397" />
     
     <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#22c55e" />
+    <meta name="theme-color" content="#22c55e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a472a" media="(prefers-color-scheme: dark)" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Laboratori Labor" />
     
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#22c55e" />
+    <meta name="msapplication-TileImage" content="/lovable-uploads/18d3ca83-9204-4a1a-9260-063cc98fa530.png" />
+    <meta name="msapplication-config" content="none" />
+    <meta name="msapplication-starturl" content="/" />
+    <meta name="msapplication-navbutton-color" content="#22c55e" />
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="/src/assets/laboratory-hero.jpg" as="image" type="image/jpeg" />
     <link rel="preload" href="/og-image.jpg" as="image" type="image/jpeg" />
+    
+    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://analytics.ahrefs.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://api.whatsapp.com" crossorigin />
+    
+    <!-- DNS Prefetch for external resources -->
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     <link rel="dns-prefetch" href="//api.whatsapp.com" />
     <link rel="dns-prefetch" href="//maps.googleapis.com" />
     <link rel="dns-prefetch" href="//facebook.com" />
     <link rel="dns-prefetch" href="//instagram.com" />
+    <link rel="dns-prefetch" href="//www.facebook.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+    <link rel="dns-prefetch" href="//analytics.ahrefs.com" />
     
     <!-- Ahrefs Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="/lec6niZqdlKG/iE2sLSjA" async></script>
@@ -92,15 +110,33 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="mobile-web-app-capable" content="yes" />
     
+    <!-- HTTP Headers Simulation -->
+    <meta http-equiv="Content-Language" content="sq, en, bs, tr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="public, max-age=3600" />
+    
     <!-- Additional SEO and performance meta tags -->
     <meta name="referrer" content="origin-when-cross-origin" />
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
     <meta name="application-name" content="Laboratori Labor" />
     <meta name="msapplication-tooltip" content="Laboratori Labor - Analiza Mjekësore në Prizren" />
     <meta name="apple-mobile-web-app-title" content="Labor Lab" />
+    
+    <!-- Enhanced Apple Meta Tags -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-startup-image" href="/lovable-uploads/18d3ca83-9204-4a1a-9260-063cc98fa530.png" />
+    
+    <!-- Machine-readable data references -->
+    <link rel="alternate" type="application/json" href="/services.json" title="Services" />
+    <link rel="alternate" type="application/json" href="/hours.json" title="Opening Hours" />
   </head>
 
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded">
+      Skip to main content
+    </a>
+    
     <!-- Static content for AI agents and search engines -->
     <noscript>
       <article>
@@ -204,7 +240,7 @@
       </article>
     </div>
     
-    <div id="root"></div>
+    <div id="root" role="main" aria-label="Main Application"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
