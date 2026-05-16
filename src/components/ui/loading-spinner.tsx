@@ -5,20 +5,29 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
+/**
+ * A precise lab-instrument loader: a scanning line crossing a
+ * hairline crosshair frame — on-brand with the clinical aesthetic.
+ */
 const LoadingSpinner = ({ className, size = 'md' }: LoadingSpinnerProps) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12'
+    sm: 'h-8 w-8',
+    md: 'h-14 w-14',
+    lg: 'h-20 w-20',
   };
 
   return (
-    <div className="flex items-center justify-center p-8">
-      <div className={cn(
-        'animate-spin rounded-full border-2 border-primary/30 border-t-primary',
-        sizeClasses[size],
-        className
-      )} />
+    <div className="flex items-center justify-center py-24" role="status" aria-label="Loading">
+      <div
+        className={cn(
+          'crosshair relative overflow-hidden rounded-sm border border-border',
+          sizeClasses[size],
+          className
+        )}
+      >
+        <div className="absolute inset-x-0 top-0 h-1/3 animate-scan bg-gradient-to-b from-transparent via-primary/40 to-transparent" />
+      </div>
+      <span className="sr-only">Loading…</span>
     </div>
   );
 };

@@ -4,6 +4,8 @@ import Hero from "@/components/Hero";
 import SEOHead from "@/components/SEOHead";
 import ErrorBoundary from "@/components/ui/error-boundary";
 import LoadingSpinner from "@/components/ui/loading-spinner";
+import ScrollProgress from "@/components/motion/ScrollProgress";
+import Cursor from "@/components/motion/Cursor";
 
 // Lazy load non-critical components
 const About = lazy(() => import("@/components/About"));
@@ -18,6 +20,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEOHead />
+      <ScrollProgress />
+      <Cursor />
       <Header />
       <main>
         <Hero />

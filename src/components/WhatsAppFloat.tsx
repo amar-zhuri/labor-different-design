@@ -1,21 +1,26 @@
 import { MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhatsAppFloat = () => {
-  const handleWhatsAppClick = () => {
-    window.open('https://wa.me/38344217859', '_blank');
-  };
+  const { t } = useLanguage();
 
   return (
-    <div className="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50">
-      <Button
-        onClick={handleWhatsAppClick}
-        className="w-12 md:w-14 h-12 md:h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse touch-manipulation"
-        size="icon"
-      >
-        <MessageSquare className="h-5 md:h-6 w-5 md:w-6" />
-      </Button>
-    </div>
+    <a
+      href="https://wa.me/38344217859"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t("contact.whatsapp")}
+      className="group fixed bottom-5 right-5 z-50 flex items-center md:bottom-8 md:right-8"
+    >
+      <span className="pointer-events-none mr-3 hidden translate-x-3 items-center rounded-full border border-border bg-card/80 px-4 py-2.5 font-mono text-[0.66rem] uppercase tracking-wider-2 text-foreground opacity-0 backdrop-blur-md transition-all duration-300 ease-precision group-hover:translate-x-0 group-hover:opacity-100 md:flex">
+        {t("contact.whatsapp")}
+      </span>
+
+      <span className="glow-ring relative flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground transition-all duration-300 ease-precision group-hover:scale-105 group-hover:brightness-110 md:h-16 md:w-16">
+        <span className="absolute inset-0 rounded-full bg-primary opacity-50 motion-safe:animate-pulse-ring" />
+        <MessageSquare className="relative h-6 w-6 md:h-7 md:w-7" strokeWidth={1.75} />
+      </span>
+    </a>
   );
 };
 
