@@ -1,5 +1,4 @@
-import { ElementType, ReactNode, RefObject } from "react";
-import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import { ElementType, ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 type RevealVariant = "up" | "left" | "right" | "scale" | "mask";
@@ -11,12 +10,13 @@ interface RevealProps {
   delay?: number;
   variant?: RevealVariant;
   as?: ElementType;
-  threshold?: number;
 }
 
 /**
- * Scroll reveal. The motion lives in CSS ([data-reveal] in index.css);
- * this only flips `.is-in` when the element enters the viewport.
+ * Robust scroll reveal. Motion lives in CSS ([data-reveal] in index.css);
+ * this flips `.is-in` when the element enters — and crucially also when it
+ * is already in OR above the viewport on mount (deep links / fast scroll /
+ * jump nav never leave content stranded at opacity:0).
  * Fully respects prefers-reduced-motion.
  */
 const Reveal = ({
@@ -25,20 +25,41 @@ const Reveal = ({
   delay = 0,
   variant = "up",
   as,
-  threshold = 0.15,
 }: RevealProps) => {
   const Tag = (as || "div") as ElementType;
-  const { targetRef, hasIntersected } = useIntersectionObserver({
-    threshold,
-    rootMargin: "0px 0px -10% 0px",
-    triggerOnce: true,
-  });
+  const ref = useRef<HTMLElement>(null);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || shown) return;
+
+    // Already visible or scrolled past → show now, no animation gap.
+    const rect = el.getBoundingClientRect();
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.top < vh * 0.92) {
+      setShown(true);
+      return;
+    }
+
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShown(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [shown]);
 
   return (
     <Tag
-      ref={targetRef as RefObject<HTMLElement>}
+      ref={ref}
       data-reveal={variant}
-      className={cn(hasIntersected && "is-in", className)}
+      className={cn(shown && "is-in", className)}
       style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
     >
       {children}

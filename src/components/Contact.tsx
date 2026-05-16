@@ -136,12 +136,17 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2955.0560376088933!2d20.72960357640207!3d42.21324694436382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135395b4f6c36203%3A0xfdf75eb84c8de2a4!2zTGFib3JhdG9yaSAiTGFib3LigJ0!5e0!3m2!1sen!2s!4v1754234412301!5m2!1sen!2s"
                 width="100%"
                 height="100%"
-                style={{ border: 0, position: "absolute", inset: 0 }}
+                style={{
+                  border: 0,
+                  position: "absolute",
+                  inset: 0,
+                  filter:
+                    "invert(0.92) hue-rotate(180deg) brightness(0.92) contrast(0.95) grayscale(0.25)",
+                }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Laboratori Labor Location"
-                className="opacity-90 [filter:invert(0.92)_hue-rotate(170deg)_brightness(0.95)_contrast(0.95)_saturate(0.7)]"
               />
               <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-border" />
               <figcaption className="pointer-events-none absolute left-5 top-5 rounded-md bg-background/70 px-3 py-1.5 font-mono text-[0.6rem] uppercase tracking-widest-2 text-foreground/80 backdrop-blur-sm">
